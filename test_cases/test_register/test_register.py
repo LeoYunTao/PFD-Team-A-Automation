@@ -1,4 +1,4 @@
-from setup import Setup
+import pytest
 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -6,8 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 
 class TestRegister:
-    def test_main(self, os_system, browser):
-        driver = Setup.initialize_driver(browser=browser, os_system=os_system)
+
+    def test_main(self, driver):
 
         form_input_data = {
             'firstName': ['Hello world'],

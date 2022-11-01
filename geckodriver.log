@@ -62,3 +62,33 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't fin
 JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
 1667308394669	Marionette	INFO	Stopped listening on port 64121
+1667312986706	geckodriver	INFO	Listening on 127.0.0.1:55797
+1667312989755	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55798" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilet4DBNa"
+1667312990025	Marionette	INFO	Marionette enabled
+1667312990029	Marionette	INFO	Listening on port 55807
+WebDriver BiDi listening on ws://127.0.0.1:55798
+Read port: 55807
+1667312990202	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilet4DBNa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55798/devtools/browser/6b0b9435-eb4a-409a-b4f5-0d53a3ecb6f7
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667312997300	Marionette	INFO	Stopped listening on port 55807
+1667312999810	geckodriver	INFO	Listening on 127.0.0.1:56125
+1667313002877	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56126" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileZxwkkl"
+1667313003122	Marionette	INFO	Marionette enabled
+1667313003125	Marionette	INFO	Listening on port 56135
+WebDriver BiDi listening on ws://127.0.0.1:56126
+Read port: 56135
+1667313003332	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileZxwkkl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56126/devtools/browser/22fc7ef9-33b5-4ee2-9450-518634117c76
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667313010914	Marionette	INFO	Stopped listening on port 56135
