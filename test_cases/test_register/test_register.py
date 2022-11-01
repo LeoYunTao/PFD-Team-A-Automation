@@ -48,3 +48,4 @@ class TestRegister:
             submit_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
             submit_button.click()
 
+        driver.quit()
