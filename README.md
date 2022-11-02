@@ -1,6 +1,6 @@
 # PFD-Team-A-Automation
 
-to all test cases: pytest test_cases/  -s --browser=chrome -os=windows -n 5 -k 'test_email'
+to all test cases: pytest test_cases/  -s --browser=chrome -os=windows -n 5
 
 
 - pip install pytest
