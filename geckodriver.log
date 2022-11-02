@@ -286,3 +286,52 @@ JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts
 JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
 JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
 1667319262493	Marionette	INFO	Stopped listening on port 54188
+1667358192925	geckodriver	INFO	Listening on 127.0.0.1:61055
+1667358195985	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61056" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileT45RCG"
+1667358196879	Marionette	INFO	Marionette enabled
+1667358196884	Marionette	INFO	Listening on port 61066
+Read port: 61066
+WebDriver BiDi listening on ws://127.0.0.1:61056
+1667358197018	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileT45RCG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61056/devtools/browser/131a7203-f4f4-4e10-a626-cc1d41c27e7c
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1667358204086	Marionette	INFO	Stopped listening on port 61066
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1667359456644	geckodriver	INFO	Listening on 127.0.0.1:61432
+1667359459716	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61433" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileOUc8jd"
+1667359460130	Marionette	INFO	Marionette enabled
+1667359460135	Marionette	INFO	Listening on port 61443
+Read port: 61443
+WebDriver BiDi listening on ws://127.0.0.1:61433
+1667359460281	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileOUc8jd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61433/devtools/browser/bae595fe-160b-4b82-89a5-73b027bd7b01
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+1667359496593	Marionette	INFO	Stopped listening on port 61443
