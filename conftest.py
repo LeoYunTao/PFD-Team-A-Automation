@@ -6,6 +6,8 @@ from selenium import webdriver
 from selenium.webdriver import chrome
 from selenium.webdriver import firefox
 
+from webdriver_manager.chrome import ChromeDriverManager
+
 def pytest_addoption(parser):
     parser.addoption(
         '--browser', action='store', 
@@ -61,5 +63,5 @@ def driver(browser, os_system):
         if browser == "firefox":
             return webdriver.Firefox()
         else:
-            return webdriver.Chrome()
+            return webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
     

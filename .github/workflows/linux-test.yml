@@ -17,8 +17,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: setup-chromedriver
-      uses: nanasess/setup-chromedriver@v1.1.0
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
