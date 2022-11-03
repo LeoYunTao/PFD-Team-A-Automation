@@ -19,6 +19,7 @@ class TestApplyAccount:
     }
 
     def test_main(self, driver, form_input_data):
+
         for test_range in range(len(list(form_input_data())[0])):
             driver.get('https://uibank.uipath.com/accounts')
 
@@ -38,7 +39,7 @@ class TestApplyAccount:
         else:
             Select(form_field).select_by_index(value_to_enter)
 
-    submit_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
-    submit_button.click()
+        submit_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
+        submit_button.click()
 
 
