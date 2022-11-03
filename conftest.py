@@ -7,6 +7,7 @@ from selenium.webdriver import chrome
 from selenium.webdriver import firefox
 
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -61,7 +62,12 @@ def driver(browser, os_system):
             return webdriver.Chrome(options=options, service=service)
     else:
         if browser == "firefox":
-            return webdriver.Firefox()
+            options = firefox.options.Options()
+            options.add_argument('--headless')
+
+            service = firefox.service.Service(GeckoDriverManager().install())
+
+            return webdriver.Firefox(options=options)
         else:
 
             options = chrome.options.Options()
