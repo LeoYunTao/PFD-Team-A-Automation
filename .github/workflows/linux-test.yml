@@ -17,10 +17,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v0.0.0
-    - name: setup-chromedriver
-      uses: nanasess/setup-chromedriver@v1.1.0
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
@@ -31,7 +27,9 @@ jobs:
         python -m pip install selenium
         python -m pip install Faker
         python -m pip install pytest
+        python -m pip install pytest-xdist
         python -m pip install pandas
+        python -m pip install webdriver-manager
     - name: Build package
-      run: pytest test_cases/ -s --browser=chrome -os=linux -n 5 -k 'test_email'
+      run: pytest test_cases/ -s --browser=firefox -os=linux -n 5 -k 'test_email'
  
