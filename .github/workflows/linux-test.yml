@@ -30,6 +30,7 @@ jobs:
         python -m pip install Faker
         python -m pip install pytest
         python -m pip install pytest-xdist
+        python -m pip install pandas
     - name: Build package
       run: pytest test_cases/ -s --browser=chrome -os=linux -n 5 -k 'test_email'
  
