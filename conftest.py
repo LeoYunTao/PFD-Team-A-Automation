@@ -63,5 +63,11 @@ def driver(browser, os_system):
         if browser == "firefox":
             return webdriver.Firefox()
         else:
-            return webdriver.Chrome(service=chrome.service.Service(ChromeDriverManager().install()))
+
+            options = chrome.options.Options()
+            options.add_argument('--headless')
+
+            service = chrome.service.Service(ChromeDriverManager().install())
+
+            return webdriver.Chrome(service=service, options=options)
     
