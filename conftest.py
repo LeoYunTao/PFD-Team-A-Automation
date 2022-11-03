@@ -63,5 +63,5 @@ def driver(browser, os_system):
         if browser == "firefox":
             return webdriver.Firefox()
         else:
-            return webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+            return webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
     
