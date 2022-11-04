@@ -65,7 +65,7 @@ def driver(browser, os_system):
             options = firefox.options.Options()
             options.add_argument('--headless')
 
-            driver = webdriver.Firefox()
+            driver = webdriver.Firefox(options=options)
 
             return driver
 
@@ -73,7 +73,7 @@ def driver(browser, os_system):
             options = chrome.options.Options()
             options.add_argument('--headless')
 
-            driver = webdriver.Chrome()
+            driver = webdriver.Chrome(options=options)
 
             return driver
 
