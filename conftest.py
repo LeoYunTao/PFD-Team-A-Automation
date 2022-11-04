@@ -38,7 +38,7 @@ def driver(browser, os_system):
                 "driver_file": "chromedriver.exe",
                 "path": f"drivers/{os_system}/Chrome"
             }
-        }
+        }   
 
         browser_file_path = os.path.abspath(browser_dict[browser]['path'])
         
