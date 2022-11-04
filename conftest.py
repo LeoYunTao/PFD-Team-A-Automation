@@ -25,62 +25,62 @@ def os_system(request):
 
 @pytest.fixture
 def driver(browser, os_system):
-    if os_system == 'windows':
-        browser_dict = {
-            "firefox": {
-                "browser_file": "firefox.exe",
-                "driver_file": "geckodriver.exe",
-                "path": f"drivers/{os_system}/Firefox"
-            },
-            "chrome": {
-                "browser_file": "chrome.exe",
-                "driver_file": "chromedriver.exe",
-                "path": f"drivers/{os_system}/Chrome"
-            }
-        }   
 
-        browser_file_path = os.path.abspath(browser_dict[browser]['path'])
+    # ## REMOVE THIS IN PRODUCTION
+    # if os_system == 'windows':
+    #     browser_dict = {
+    #         "firefox": {
+    #             "browser_file": "firefox.exe",
+    #             "driver_file": "geckodriver.exe",
+    #             "path": f"drivers/{os_system}/Firefox"
+    #         },
+    #         "chrome": {
+    #             "browser_file": "chrome.exe",
+    #             "driver_file": "chromedriver.exe",
+    #             "path": f"drivers/{os_system}/Chrome"
+    #         }
+    #     }   
+
+    #     browser_file_path = os.path.abspath(browser_dict[browser]['path'])
         
-        if browser == "firefox":
-            options = firefox.options.Options()
-            options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
-            options.add_argument('--headless')
+    #     if browser == "firefox":
+    #         options = firefox.options.Options()
+    #         options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
 
-            service = firefox.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
+    #         service = firefox.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
-            driver = webdriver.Firefox(options=options, service=service)
+    #         driver = webdriver.Firefox(options=options, service=service)
 
-            return driver
-        else:
-            options = chrome.options.Options()
-            options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
-            options.add_argument('--headless')
+    #         return driver
+    #     else:
+    #         options = chrome.options.Options()
+    #         options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
 
-            service = chrome.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
+    #         service = chrome.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
-            driver = webdriver.Chrome(options=options, service=service)
+    #         driver = webdriver.Chrome(options=options, service=service)
 
-            return driver
-    else:
-        if browser == "firefox":
-            options = firefox.options.Options()
-            options.add_argument('--headless')
+    #         return driver
+    # else:
+    if browser == "firefox":
+        options = firefox.options.Options()
+        options.add_argument('--headless')
 
-            service = firefox.service.Service()
+        service = firefox.service.Service()
 
-            driver = webdriver.Firefox(options=options)
-            driver.switch_to.window(driver.current_window_handle)
+        driver = webdriver.Firefox(options=options)
+        driver.switch_to.window(driver.current_window_handle)
 
-            return driver
-        elif browser == "chrome":
+        return driver
+    elif browser == "chrome":
 
-            options = chrome.options.Options()
-            options.add_argument('--headless')
+        options = chrome.options.Options()
+        options.add_argument('--headless')
 
-            service = chrome.service.Service()
+        service = chrome.service.Service()
 
-            driver = webdriver.Chrome(service=service, options=options)
-            driver.switch_to.window(driver.current_window_handle)
+        driver = webdriver.Chrome(service=service, options=options)
+        driver.switch_to.window(driver.current_window_handle)
 
-            return driver
+        return driver
     
