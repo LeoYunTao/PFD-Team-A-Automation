@@ -26,35 +26,54 @@ def os_system(request):
     return request.config.getoption('--os')
 
 @pytest.fixture
-def driver(browser):
+def driver(browser, os_system):
 
-    if browser == "firefox":
-        options = firefox.options.Options()
+    if os_system == "linux":
+        if browser == "firefox":
+            driver = webdriver.Firefox()
+            driver.switch_to.window(driver.current_window_handle)
 
-        service = firefox.service.Service(GeckoDriverManager().install())
+            return driver
 
-        driver = webdriver.Firefox(service=service, options=options)
-        driver.switch_to.window(driver.current_window_handle)
+        elif browser == "chrome":
+            driver = webdriver.Chrome()
+            driver.switch_to.window(driver.current_window_handle)
 
-        return driver
+            return driver
 
-    elif browser == "chrome":
+        elif browser == "edge":
+            driver = webdriver.Edge()
+            driver.switch_to.window(driver.current_window_handle)
 
-        options = chrome.options.Options()
+            return driver
+    else:
+        if browser == "firefox":
+            options = firefox.options.Options()
 
-        service = chrome.service.Service(ChromeDriverManager().install())
+            service = firefox.service.Service(GeckoDriverManager().install())
 
-        driver = webdriver.Chrome(service=service, options=options)
-        driver.switch_to.window(driver.current_window_handle)
+            driver = webdriver.Firefox(service=service, options=options)
+            driver.switch_to.window(driver.current_window_handle)
 
-        return driver
+            return driver
 
-    elif browser == "edge":
-        options = edge.options.Options()
+        elif browser == "chrome":
 
-        service = edge.service.Service(EdgeChromiumDriverManager().install())
+            options = chrome.options.Options()
 
-        driver = webdriver.Edge(service=service, options=options)
-        driver.switch_to.window(driver.current_window_handle)
+            service = chrome.service.Service(ChromeDriverManager().install())
 
-        return driver
+            driver = webdriver.Chrome(service=service, options=options)
+            driver.switch_to.window(driver.current_window_handle)
+
+            return driver
+
+        elif browser == "edge":
+            options = edge.options.Options()
+
+            service = edge.service.Service(EdgeChromiumDriverManager().install())
+
+            driver = webdriver.Edge(service=service, options=options)
+            driver.switch_to.window(driver.current_window_handle)
+
+            return driver
