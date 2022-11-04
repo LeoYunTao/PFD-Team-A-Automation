@@ -33,7 +33,7 @@ def driver(browser):
 
         service = firefox.service.Service(GeckoDriverManager().install())
 
-        driver = webdriver.Firefox(options=options)
+        driver = webdriver.Firefox(service=service, options=options)
         driver.switch_to.window(driver.current_window_handle)
 
         return driver
