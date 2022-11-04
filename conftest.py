@@ -28,25 +28,7 @@ def os_system(request):
 @pytest.fixture
 def driver(browser, os_system):
 
-    if os_system == "linux":
-        if browser == "firefox":
-            driver = webdriver.Firefox()
-            driver.switch_to.window(driver.current_window_handle)
-
-            return driver
-
-        elif browser == "chrome":
-            driver = webdriver.Chrome()
-            driver.switch_to.window(driver.current_window_handle)
-
-            return driver
-
-        elif browser == "edge":
-            driver = webdriver.Edge()
-            driver.switch_to.window(driver.current_window_handle)
-
-            return driver
-    else:
+    if os_system == "windows":
         if browser == "firefox":
             options = firefox.options.Options()
 
@@ -75,5 +57,21 @@ def driver(browser, os_system):
 
             driver = webdriver.Edge(service=service, options=options)
             driver.switch_to.window(driver.current_window_handle)
+
+            return driver
+
+    else:
+        if browser == "firefox":
+            driver = webdriver.Firefox()
+
+            return driver
+
+        elif browser == "chrome":
+            driver = webdriver.Chrome()
+
+            return driver
+
+        elif browser == "edge":
+            driver = webdriver.Edge()
 
             return driver
