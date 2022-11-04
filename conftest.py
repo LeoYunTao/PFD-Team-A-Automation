@@ -48,14 +48,20 @@ def driver(browser, os_system):
 
             service = firefox.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
-            return webdriver.Firefox(options=options, service=service)
+            driver = webdriver.Firefox(options=options, service=service)
+            driver.switch_to.window(driver.current_window_handle)
+
+            return driver
         else:
             options = chrome.options.Options()
             options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
 
             service = chrome.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
-            return webdriver.Chrome(options=options, service=service)
+            driver = webdriver.Chrome(options=options, service=service)
+            driver.switch_to.window(driver.current_window_handle)
+
+            return driver
     else:
         if browser == "firefox":
             options = firefox.options.Options()
@@ -63,7 +69,10 @@ def driver(browser, os_system):
 
             service = firefox.service.Service()
 
-            return webdriver.Firefox(options=options)
+            driver = webdriver.Firefox(options=options)
+            driver.switch_to.window(driver.current_window_handle)
+
+            return driver
         elif browser == "chrome":
 
             options = chrome.options.Options()
@@ -71,5 +80,8 @@ def driver(browser, os_system):
 
             service = chrome.service.Service()
 
-            return webdriver.Chrome(service=service, options=options)
+            driver = webdriver.Chrome(service=service, options=options)
+            driver.switch_to.window(driver.current_window_handle)
+
+            return driver
     

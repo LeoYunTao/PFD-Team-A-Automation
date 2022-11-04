@@ -335,3 +335,367 @@ JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts
 JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
 JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
 1667359496593	Marionette	INFO	Stopped listening on port 61443
+1667563512533	geckodriver	INFO	Listening on 127.0.0.1:51247
+1667563515592	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51254" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilei4pyh0"
+1667563516378	Marionette	INFO	Marionette enabled
+1667563516387	Marionette	INFO	Listening on port 51304
+Read port: 51304
+WebDriver BiDi listening on ws://127.0.0.1:51254
+1667563516627	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilei4pyh0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51250/devtools/browser/5786b2e1-4069-4f01-9e86-4df64ac09594
+1667563554564	Marionette	INFO	Stopped listening on port 51299
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+s\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51363" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileDn8IjE"
+1667563523290	Marionette	INFO	Marionette enabled
+1667563523297	Marionette	INFO	Listening on port 51667563524253	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome1667563525613	Marionette	INFO	Stopped listening on port 51297
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1108: Error: Sqlite.jsm has1667563529020	Marionette	INFO	Stopped listening on port 51300
+ta\Local\Temp\rust_mozprofileDiRS2k\protections.sqlite
+ https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous m1667563529567	mozrunner::runner	INFO	Running command: "C:\\U1667563529630	mozrunner::runner	INFO	Running command: "C:\\U1667563529728	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52453" "--1667563529971	Marionette	INFO	Marionette enabled
+16675635291667563530041	Marionette	INFO	Marionette enabled
+16675635301667563530182	Marionette	INFO	Marionette enabled
+16675635301667563532910	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52773" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileK2Poy1"
+1667563533365	Marionette	INFO	Marionette enabled
+1667563533374	Marionette	INJavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/nconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundErrJavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667563539085	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginReci1667563540076	Marionette	INFO	Stopped listening on port 52946
+.uipath.com."
+1667563539810	Marionette	INFO	Stopped listening on port 52781
+se timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667563544984	Marionette	INFO	Stopped listening on port 52939
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+1667563980944	geckodriver	INFO	Listening on 127.0.0.1:63817
+1667563984005	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63825" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilepNmtDa"
+1667563984561	Marionette	INFO	Marionette enabled
+1667563984567	Marionette	INFO	Listening on port 63875
+Read port: 63874
+WebDriver BiDi listening on ws://127.0.0.1:63818
+1667563984844	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileVHKukd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:63826/devtools/browser/b4a3fded-8eb3-42ce-b043-5048e4e04f1d
+JavaScript error: https://uibank.uipath.com/node_modules/pdf1667564007482	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63929" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilelgiFo1"
+1667564007860	Marionette	INFO	Marionette enabled
+1667564007864	Marionette	INFO	Listening on port 64733
+Read port: 64733
+WebDriver BiDi listening on ws://127.0.0.1:63929
+1667564007972	RemoteAgent	WA1667564008204	Marionette	WARN	TimedPromise timed out after 5console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilelgiFo1\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:63929/devtools/browser/be275742-3820-4b8d-9c87-e07d0270bda4
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667564041097	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667564041816	Marionette	INFO	Stopped listening on port 64733
+ No settings file exists, new profile?" (new NotFoundError("Could not open the file aconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("CouDevTools listening on ws://127.0.0.1:64952/devtools/browser/362f2aca-8812-49bc-82dc-f02388609887
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667564041969	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "Falling back to a synchronous m1667564043772	Marionette	INFO	Stopped listening on port 65172
+te	INFO	Stopped listening on port 65166
+console.error: services.settings: 
+  main/query-strippin1667564046774	Marionette	INFO	Stopped listening on port 65175
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+yu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51231" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileHGvh3A"
+1667564045936	Marionette	INFO	Marionette enabled
+1667564045943	Marionette	INFO	Listening on port 51470
+Read port: 51470
+WebDriver BiDi listening on ws://127.0.0.1:51231
+1667564046070	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileHGvh3A\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51231/devtools/browser/77c51c9b-d561-4faf-a66b-09de6e8c4260
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1667564076890	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1667564078676	Marionette	INFO	Stopped listening on port 51470
+1667564483697	geckodriver	INFO	Listening on 127.0.0.1:52301
+1667564486732	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52300" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilefXiU0n"
+1667564487254	Marionette	INFO	Marionette enabled
+1667564487259	Marionette	INFO	Listening on port 52352
+Read port: 52349
+WebDriver BiDi listening on ws://127.0.0.1:52300
+1667564487502	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilegtcUjO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52296/devtools/browser/ed3d30e7-af86-4b15-996a-7e72826db099
+1667564555173	Marionette	INFO	Stopped listening on port 52350
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 1667564532381	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exconsole.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667564535563	Marionette	INFO	Stopped listening on port 52348
+!!! error running onStopped callback: TypeError: callback is not a function
+istening on port 52347
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1108: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\Leoyu\AppData\Local\Temp\rust_mozprofileRq1Rw8\protections.sqlite
+: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilerzEPDW\\search.json.mozlz4"1667564537547	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-1667564539024	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53270" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\1667564539604	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53305" "--remot1667564539688	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automaconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileGizOUk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53270/devtools/browser/7c22e403-20b7-4f9b-9a59-82c4d9bc8c58
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js,1667564543728	mozrunner::runner	INFO	Running commandJavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://grconsole.warn: LoginRecipes: "Falling back to a synchronous message for:console.warn: LoginRecipes: "F1667564548603	Marionette	INFO	Stopped listening on port 53402
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+ionette	INFO	Stopped listening on port 53502
+ectory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667564548425	Marionette	INFO	Stopped listening on port 53540
+ssDevTools listening on ws://127.0.0.1:51667564547498	Marionette	INFO	Stopped listening on port 53546
+aScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1667564550753	Marionette	INFO	Stopped listening on port 53720
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+1667564793171	geckodriver	INFO	Listening on 127.0.0.1:55036
+1667564796218	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55033" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileq4aVly"
+1667564796706	Marionette	INFO	Marionette enabled
+1667564796712	Marionette	INFO	Listening on port 55086
+Read port: 55085
+WebDriver BiDi listening on ws://127.0.0.1:55037
+1667564796947	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilenmxL39\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55035/devtools/browser/2c83a1de-46ab-4c34-a60e-40e27431b858
+1667564845911	Marionette	INFO	Stopped listening on port 55085
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+s\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55194" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilenQ8xZr"
+1667564804009	Marionette	INFO	Marionette enabled
+1667564804012	Marionette	INFO	Listening on port 55776
+WebDriver BiDi listening on ws://127.0.0.1:55194
+Read port: 55776
+1667564804326	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilenQ8xZr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55194/devtools/browser/39b3cefa-c8d1-4612-a97f-6297a598468c1667564812392	Marionette	INFO	Stopped listening on port 55081
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+odules/pdfmake/build/vfs_fonts.js, li1667564807852	mozrunner::runner	INFO	Running command: "C:\\U1667564808822	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56017" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Tempconsole.warn: LoginRecipe1667564809181	Marionette	INFO	Marionette enabled
+1667564809186	Marionette	I1667564809348	Marionette	INFO	Stopped listening on port 55776
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request faiconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofile8F1Le5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56017/devtools/browser/498ff75d-5f9f-41d1-8c7d-dc9f76ada2bd
+1667564813414	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56531" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileogdnC1"
+1667564813819	Marionette	INFO	Marionette enabled
+1667564813826	Marionette	INFO	Listening on port 57016
+Read port: 57016
+WebDriver BiDi listening on ws://127.console.warn:1667564813958	RemoteAgent	WA1667564814143	Mario1667564816398	mozrunner::runner	INFO	Running command: "C:\\U1667564816768	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56998" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofile3rhK23"
+1667564817225	Marionette	INFO	Marionette enabled
+1667564817231	Marionette	INF1667564819456	Marionette	INFO	Stopped listening on port 56248
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\TeDevTools listening on ws://127.0.0.1:51667564820256	Marionette	INFO	Stopped listening on port 5701JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667564823334	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@ch1667564823429	Marionette	INFO	Stopped listening on port 57375
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+e/interaction.js:179:31
+1667564824080	Marionette	INFO	Stopped listening on port 57313
+1667564919027	geckodriver	INFO	Listening on 127.0.0.1:58066
+1667564922073	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58067" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileOHGQaj"
+1667564922372	Marionette	INFO	Marionette enabled
+1667564922375	Marionette	INFO	Listening on port 58076
+Read port: 58076
+WebDriver BiDi listening on ws://127.0.0.1:58067
+1667564922459	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileOHGQaj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58067/devtools/browser/78e06680-ff6f-49f6-b1db-a7a5defafeab
+1667565156492	Marionette	INFO	Stopped listening on port 58076
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+1667567226800	geckodriver	INFO	Listening on 127.0.0.1:55048
+1667567229842	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55049" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileJXcpsy"
+1667567230099	Marionette	INFO	Marionette enabled
+1667567230103	Marionette	INFO	Listening on port 55059
+WebDriver BiDi listening on ws://127.0.0.1:55049
+Read port: 55059
+1667567230302	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileJXcpsy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55049/devtools/browser/fa3a7c50-1b8c-47c6-bef5-45d5921c34c5
+1667568301242	Marionette	INFO	Stopped listening on port 55059
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+rs\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50226" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileTd6XAy"
+1667568154662	Marionette	INFO	Marionette enabled
+1667568154668	Marionette	INFO	Listening on port 50279
+WebDriver BiDi listening on ws://127.0.0.1:50226
+Read port: 50279
+1667568155078	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileq0SPbo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50226/devtools/browser/c7818fd0-1927-452d-a78c-67c3c7b1cabe
+1667568237162	Marionette	INFO	Stopped listening on port 50277
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+ript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1667568164012	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1667568170251	Marionette	INFO	Stopped listening on port 50279
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+ettings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+[Parent 13016, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+ing command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.ex1667568168214	Marionette	INFO	Stopped listening on port 50837
+llow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileVi5qXw"
+1667568168023	Marionette	INFO	Marionette enabled
+1667568168027	Marionette	INFO	Listening on port 51908
+Read port: 51908
+WebDriver BiDi listening on ws://127.0.0.1:51322
+1667568168145	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists,1667568172296	mozrunner::runner	INFO	Running command: "C:\\U1667568172440	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52043" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\1667568172654	Marionette	INFO	Marionette enabled
+16675681721667568172878	Marionette	INFO	Marionette enabled
+1667568172883	Marionette	INFO	Listening on port 52267
+WebDriver BiDi listening on ws://127.0.0.1:52043
+Read port: 52267
+1667568173152	RemoteAgent	WAconsole.warn: SearchSettings: "get: No settings file exists,console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("1667568174659	Marionette	INFO	Stopped listening on port 51908
+DevTools listening on ws://127.0.0.1:52026/devtools/browser/DevTools listening on ws://127.0.0.1:5JavaScript error: https://uibank.uipath.com/node_modules/pdfJavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fJavaScript error: resource://gre/modules/XULStore.jsm, line JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/Xconsole.warn: LoginRecipes: "Falling back to a synchronous m1667568179338	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1667568181955	Marionette	INFO	Stopped lis1667568181999	Marionetconsole.error: services.settings: 
+  maiJavaScript error: resource://gre/modules/Sqlite.jsm, line 1108: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\Leoyu\AppData\Local\Temp\rust_mozprofileWZ8Nxx\protections.sqlite
+ectory.
+JavaScript error: resource://gre/modules/X1667568180381	Marionette	WARN	TimedPromise timed out after 51667568181910	Marionette	INFO	Stopped listening on port 52403
+onette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1667568181889	Marionette	INFO	Stopped listening on port 52385
+!!! error running onStopped callback: TypeError: callback is not a function
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1108: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\Leoyu\AppData\Local\Temp\rust_mozprofileWXbGeI\protections.sqlite
+1667568287904	geckodriver	INFO	Listening on 127.0.0.1:53627
+1667568290948	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53628" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilezzGP1Z"
+1667568291223	Marionette	INFO	Marionette enabled
+1667568291227	Marionette	INFO	Listening on port 53639
+WebDriver BiDi listening on ws://127.0.0.1:53628
+Read port: 53639
+1667568291483	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1667568332091	geckodriver	INFO	Listening on 127.0.0.1:53966
+1667568335162	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53963" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilehzXTtH"
+1667568335638	Marionette	INFO	Marionette enabled
+1667568335649	Marionette	INFO	Listening on port 54017
+Read port: 54017
+WebDriver BiDi listening on ws://127.0.0.1:53963
+1667568335901	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileTVLQzM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53967/devtools/browser/7a3a3131-9135-46bf-a538-609fac48386f
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667568391387	Marionette	INFO	Stopped listening on port 54016
+sole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileZsXKsb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54074/devtools/browser/72bc92a7-024d-45c8-becf-8eecb3450c6c
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 1667568346825	mozrunner::runner	INFO	Running command: "C:\\U1667568347066	mozrunner::runner	INFO	Running command: "C:\\U1667568347213	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667568348223	Marionette	INFO	Stopped listening on port 54776
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+t 55323
+Read port: 55323
+WebDriver BiDi lisconsole.warn: SearchSettings: "get: No settings file exists,console.warn: SearchSettings: "get: No settings file exists,console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("CouDevTools listening on ws://127.0.0.1:54909/devtools/browser/1667568352287	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55422" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileb7r1oe"
+1667568352659	Marionette	INFO	Marionette enabled
+1667568352665	Marionette	INFO	Listening on port 55931
+Read port: 55931
+WebDriver BiDi listening on ws://127.0.0.1:55422
+1667568352780	RemoteAgent	WARN	TLS certificate errors will be ignored for this sessioconconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Cou1667568354100	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/mDevTools listening on ws://127.0.0.1:55422/devtools/browser/b31c6b55-534f-4d07-a93b-d643490ae4e4
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expre1667568359377	Marionette	INFO	Stopped listening on port 55298
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+Can't find profile directory.
+1667568359082	Marionette	INFO	Stopped listening on port 55931
+1667568392005	geckodriver	INFO	Listening on 127.0.0.1:57797
+1667568395061	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57798" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileRpv1zW"
+1667568395315	Marionette	INFO	Marionette enabled
+1667568395318	Marionette	INFO	Listening on port 57809
+WebDriver BiDi listening on ws://127.0.0.1:57798
+Read port: 57809
+1667568395526	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofileRpv1zW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57798/devtools/browser/11658a11-594d-41e1-883a-c98b57291437
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667568403099	Marionette	INFO	Stopped listening on port 57809
+1667568614050	geckodriver	INFO	Listening on 127.0.0.1:58411
+1667568617108	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58423" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilepftzcx"
+1667568618164	Marionette	INFO	Marionette enabled
+1667568618170	Marionette	INFO	Listening on port 58524
+Read port: 58523
+WebDriver BiDi listening on ws://127.0.0.1:58416
+1667568618456	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Leoyu\\AppData\\Local\\Temp\\rust_mozprofilepdTMtw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58418/devtools/browser/610fcfd9-b06e-48d2-8cb1-268e0ab17806
+1667568644535	Marionette	INFO	Stopped listening on port 58513
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 1667568630258	mozrunner::runner	INFO	Running command: "C:\\Users\\Leoyu\\Documents\\PFD-Team-A-Automation\\drivers\\windows\\Firefox\\firefox.exconsole.warn: LoginRecipes: "Falling back to a synchronous message for: https://uibank.uipath.com."
+1667568635646	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/in1667568639064	Marionette	INFO	Stopped listening on port 58510
+ent/marionette/interaction.js:179:31
+1667568639145	Marionette	INFO	Stopped listening on port 58518
+age for: https://uibank.uipath.com."
+1667568640952	Marionette	INFO	Stopped listening on port 58508
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+r: https://uibank.uipath.com/node_modules/pdfmake/build/pdfmake.min.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts.js, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1667568639025	Marionette	INFO	Stopped listening on port 59909

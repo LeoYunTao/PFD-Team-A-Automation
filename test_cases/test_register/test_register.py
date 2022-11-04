@@ -26,7 +26,7 @@ class TestRegisterData:
             'maritalStatus': [random.randint(0, 3) for _ in range(rows)],
             'numberOfDependents': [random.randint(0, 100) for _ in range(rows)],
             'username': [fake.unique.user_name() for _ in range(rows)],
-            'email': [fake.unique.email() for _ in range(rows)],
+            'email': [fake.unique.email().split("@")[0] + str(random.random())[2:] + "@" + fake.unique.email().split("@")[1] for _ in range(rows)],
             'password': [fake.unique.password() for _ in range(rows)]
         })
 
@@ -81,8 +81,6 @@ class TestRegister:
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email(rows=5))
     def test_email(self, driver, form_input_data):
-
-        print(form_input_data)
 
         self.fill_form(driver, form_input_data)
 
