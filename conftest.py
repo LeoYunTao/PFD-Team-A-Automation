@@ -65,7 +65,7 @@ def driver(browser, os_system):
             options = firefox.options.Options()
             options.add_argument('--headless')
 
-            service = firefox.service.Service(GeckoDriverManager().install())
+            service = firefox.service.Service()
 
             return webdriver.Firefox(options=options)
         else:
@@ -73,7 +73,7 @@ def driver(browser, os_system):
             options = chrome.options.Options()
             options.add_argument('--headless')
 
-            service = chrome.service.Service(ChromeDriverManager().install())
+            service = chrome.service.Service()
 
             return webdriver.Chrome(service=service, options=options)
     
