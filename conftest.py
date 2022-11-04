@@ -5,8 +5,6 @@ from selenium import webdriver
 
 from selenium.webdriver import chrome, firefox
 
-from webdriver_manager.firefox import GeckoDriverManager
-
 def pytest_addoption(parser):
     parser.addoption(
         '--browser', action='store', 
