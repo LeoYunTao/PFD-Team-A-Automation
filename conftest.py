@@ -63,15 +63,15 @@ def driver(browser, os_system):
             options = firefox.options.Options()
             options.add_argument('--headless')
 
-            service = firefox.service.Service(GeckoDriverManager().install())
+            service = firefox.service.Service(executable_path=os.environ["GECKOWEBDRIVER"])
 
             return webdriver.Firefox(options=options)
-        else:
+        elif browser == "chrome":
 
             options = chrome.options.Options()
             options.add_argument('--headless')
 
-            service = chrome.service.Service()
+            service = chrome.service.Service(executable_path=os.environ["CHROMEWEBDRIVER"])
 
             return webdriver.Chrome(service=service, options=options)
     
