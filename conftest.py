@@ -49,7 +49,6 @@ def driver(browser, os_system):
             service = firefox.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
             driver = webdriver.Firefox(options=options, service=service)
-            driver.switch_to.window(driver.current_window_handle)
 
             return driver
         else:
@@ -59,7 +58,6 @@ def driver(browser, os_system):
             service = chrome.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
             driver = webdriver.Chrome(options=options, service=service)
-            driver.switch_to.window(driver.current_window_handle)
 
             return driver
     else:
