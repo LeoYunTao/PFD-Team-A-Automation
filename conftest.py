@@ -44,7 +44,7 @@ def driver(browser, os_system):
         if browser == "firefox":
             options = firefox.options.Options()
             options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
-            options.add_argument('--no-sandbox')
+            options.add_argument('--headless')
 
             service = firefox.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
@@ -54,7 +54,7 @@ def driver(browser, os_system):
         else:
             options = chrome.options.Options()
             options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
-            options.add_argument('--no-sandbox')
+            options.add_argument('--headless')
 
             service = chrome.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
