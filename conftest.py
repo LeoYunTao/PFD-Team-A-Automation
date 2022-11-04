@@ -72,6 +72,8 @@ def driver(browser, os_system):
             return driver
 
         elif browser == "edge":
-            driver = webdriver.Edge()
+            options = edge.options.Options()
+            options.add_argument('--headless')
+            driver = webdriver.Edge(options=options)
 
             return driver
