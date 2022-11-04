@@ -14,7 +14,7 @@ def main():
     if current_os == "Windows":
         current_os = current_os.lower()
     elif current_os == "Linux":
-        current_os.lower()
+        current_os = current_os.lower()
     elif current_os == "Darwin":
         current_os = "macos"
     else:
