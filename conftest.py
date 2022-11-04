@@ -25,7 +25,6 @@ def os_system(request):
 
 @pytest.fixture
 def driver(browser, os_system):
-
     if os_system == 'windows':
         browser_dict = {
             "firefox": {
@@ -45,6 +44,7 @@ def driver(browser, os_system):
         if browser == "firefox":
             options = firefox.options.Options()
             options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
+            options.add_argument('--no-sandbox')
 
             service = firefox.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
@@ -54,6 +54,7 @@ def driver(browser, os_system):
         else:
             options = chrome.options.Options()
             options.binary_location = os.path.join(browser_file_path, browser_dict[browser]['browser_file'])
+            options.add_argument('--no-sandbox')
 
             service = chrome.service.Service(os.path.join(browser_file_path, browser_dict[browser]['driver_file']))
 
