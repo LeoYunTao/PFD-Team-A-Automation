@@ -5,9 +5,9 @@ def main():
     N_JOBS = 5
 
     os_browser = {
-        'windows': ['chrome', 'firefox'],
-        'linux': ['chrome', 'firefox'],
-        'macos': ['chrome', 'firefox'],
+        'windows': ['chrome', 'firefox', 'edge'],
+        'linux': ['chrome', 'firefox', 'edge'],
+        'macos': ['chrome', 'firefox', 'edge'],
     }
 
     current_os = platform.system()
