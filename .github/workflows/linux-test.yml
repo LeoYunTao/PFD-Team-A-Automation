@@ -31,5 +31,5 @@ jobs:
         python -m pip install pandas
         python -m pip install webdriver-manager
     - name: Build package
-      run: pytest test_cases/ -s --browser=firefox -os=linux -n 5 -k 'test_email'
+      run: pytest test_cases/ -s --browser=chrome -os=linux -n 5 -k 'test_email'
  
