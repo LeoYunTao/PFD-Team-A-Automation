@@ -2,7 +2,7 @@ import pytest
 import platform
 
 def main():
-    N_JOBS = 10
+    N_JOBS = 8
 
     os_browser = {
         'windows': ['chrome', 'firefox'],
