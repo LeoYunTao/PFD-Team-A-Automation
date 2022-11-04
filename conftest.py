@@ -62,11 +62,17 @@ def driver(browser, os_system):
 
     else:
         if browser == "firefox":
+            options = firefox.options.Options()
+            options.add_argument('--headless')
+
             driver = webdriver.Firefox()
 
             return driver
 
         elif browser == "chrome":
+            options = chrome.options.Options()
+            options.add_argument('--headless')
+
             driver = webdriver.Chrome()
 
             return driver
