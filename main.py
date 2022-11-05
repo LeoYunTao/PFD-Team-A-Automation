@@ -21,7 +21,7 @@ def main():
         raise Exception("OS not found")
 
     for browser in os_browser[current_os]:
-        retcode = pytest.main(['test_cases/', f'--browser={browser}', f'-n {N_JOBS}', '--production=true', '-k \'TestRegister\''])
+        retcode = pytest.main(['test_cases/', f'--browser={browser}', '--production=true', f'-n {N_JOBS}'])
 
 if __name__ == '__main__':
     main()
