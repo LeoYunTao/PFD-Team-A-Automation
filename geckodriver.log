@@ -699,3 +699,14 @@ JavaScript error: https://uibank.uipath.com/node_modules/pdfmake/build/vfs_fonts
 JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
 JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
 1667568639025	Marionette	INFO	Stopped listening on port 59909
+1667666521386	geckodriver	INFO	Listening on 127.0.0.1:53374
+1667666521956	geckodriver	INFO	Listening on 127.0.0.1:53377
+1667666522288	geckodriver	INFO	Listening on 127.0.0.1:53380
+1667666522579	geckodriver	INFO	Listening on 127.0.0.1:53385
+1667666522699	geckodriver	INFO	Listening on 127.0.0.1:53388
+1667666525491	geckodriver	INFO	Listening on 127.0.0.1:53406
+1667666526231	geckodriver	INFO	Listening on 127.0.0.1:53416
+1667666526573	geckodriver	INFO	Listening on 127.0.0.1:53423
+1667666526922	geckodriver	INFO	Listening on 127.0.0.1:53426
+1667666527003	geckodriver	INFO	Listening on 127.0.0.1:53429
+1667666529815	geckodriver	INFO	Listening on 127.0.0.1:53447

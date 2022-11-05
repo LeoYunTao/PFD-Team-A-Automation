@@ -12,74 +12,71 @@ def pytest_addoption(parser):
         '--browser', action='store', 
         default='chrome', help='The browser to perform testing on'
     )
+    # parser.addoption(
+    #     '--os', action='store', 
+    #     default='windows', help='The os that the testing will be performed on'
+    # )
     parser.addoption(
-        '--os', action='store', 
-        default='windows', help='The os that the testing will be performed on'
+        '--production', action='store', 
+        default='false', help='See if the code is in production or testing mode'
     )
 
 @pytest.fixture
 def browser(request):
     return request.config.getoption('--browser')
 
-@pytest.fixture
-def os_system(request):
-    return request.config.getoption('--os')
+# @pytest.fixture
+# def os_system(request):
+#     return request.config.getoption('--os')
 
 @pytest.fixture
-def driver(browser, os_system):
+def production(request):
+    return request.config.getoption('--production')
 
-    if os_system == "windows":
-        if browser == "firefox":
-            options = firefox.options.Options()
+@pytest.fixture
+def driver(browser, production):
 
+    if browser == 'firefox':
+        options = firefox.options.Options()
+
+        service = None
+        if production == 'false':
             service = firefox.service.Service(GeckoDriverManager().install())
+        else:
+            options.add_argument('--headless')
 
-            driver = webdriver.Firefox(service=service, options=options)
-            driver.switch_to.window(driver.current_window_handle)
+        driver = webdriver.Firefox(service=service, options=options)
+        driver.switch_to.window(driver.current_window_handle)
 
-            return driver
+        return driver
 
-        elif browser == "chrome":
+    elif browser == 'chrome':
+        options = chrome.options.Options()
 
-            options = chrome.options.Options()
-
+        service = None
+        if production == 'false':
             service = chrome.service.Service(ChromeDriverManager().install())
+        else:
+            options.add_argument('--headless')
 
-            driver = webdriver.Chrome(service=service, options=options)
-            driver.switch_to.window(driver.current_window_handle)
+        driver = webdriver.Chrome(service=service, options=options)
+        driver.switch_to.window(driver.current_window_handle)
 
-            return driver
+        return driver
 
-        elif browser == "edge":
-            options = edge.options.Options()
+    elif browser == 'edge':
+        options = edge.options.Options()
 
+        service = None
+        if production == 'false':
             service = edge.service.Service(EdgeChromiumDriverManager().install())
+        else:
+            options.add_argument('--headless')
+        
+        driver = webdriver.Edge(service=service, options=options)
+        driver.switch_to.window(driver.current_window_handle)
 
-            driver = webdriver.Edge(service=service, options=options)
-            driver.switch_to.window(driver.current_window_handle)
-
-            return driver
+        return driver
 
     else:
-        if browser == "firefox":
-            options = firefox.options.Options()
-            options.add_argument('--headless')
-
-            driver = webdriver.Firefox(options=options)
-
-            return driver
-
-        elif browser == "chrome":
-            options = chrome.options.Options()
-            options.add_argument('--headless')
-
-            driver = webdriver.Chrome(options=options)
-
-            return driver
-
-        elif browser == "edge":
-            options = edge.options.Options()
-            options.add_argument('--headless')
-            driver = webdriver.Edge(options=options)
-
-            return driver
+        raise Exception("Browser not found")
