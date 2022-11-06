@@ -22,7 +22,7 @@ def main():
 
     open('browsers.txt', mode='w+').write(','.join(os_browser[current_os]))
 
-    retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}', f'--html=reports/report.html'])
+    retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}'])#, f'--html=reports/report.html'])
 
 if __name__ == '__main__':
     main()
