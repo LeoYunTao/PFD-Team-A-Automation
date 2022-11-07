@@ -25,7 +25,7 @@ class TestRegisterData:
             'age': [fake.unique.date_of_birth().strftime("%m/%d/%Y") for _ in range(rows)],
             'maritalStatus': [random.randint(0, 3) for _ in range(rows)],
             'numberOfDependents': [random.randint(0, 100) for _ in range(rows)],
-            'username': [fake.unique.user_name() for _ in range(rows)],
+            'username': [fake.unique.user_name() + str(random.random())[2:] for _ in range(rows)],
             'email': [fake.unique.email().split("@")[0] + str(random.random())[2:] + "@" + fake.unique.email().split("@")[1] for _ in range(rows)],
             'password': [fake.unique.password() for _ in range(rows)]
         })
