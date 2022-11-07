@@ -25,7 +25,5 @@ def main():
 
     retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}'])#, f'--html=reports/report.html'])
 
-    del os.environ['browsers']
-
 if __name__ == '__main__':
     main()
