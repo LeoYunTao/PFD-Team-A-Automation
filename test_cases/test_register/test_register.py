@@ -67,6 +67,11 @@ class TestRegister:
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_main(rows=5))
     def test_main(self, driver, form_input_data):
 
+        fake = Faker()
+
+        form_input_data['username'] = fake.unique.user_name() + str(random.random())[2:]
+        form_input_data['email'] = fake.unique.email().split("@")[0] + str(random.random())[2:] + "@" + fake.unique.email().split("@")[1]
+
         self.fill_form(driver, form_input_data)
 
         try: 
@@ -81,6 +86,11 @@ class TestRegister:
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email(rows=5))
     def test_email(self, driver, form_input_data):
+
+        fake = Faker()
+
+        form_input_data['username'] = fake.unique.user_name() + str(random.random())[2:]
+        form_input_data['email'] = fake.unique.email().split("@")[0] + str(random.random())[2:] + "@" + fake.unique.email().split("@")[1]
 
         self.fill_form(driver, form_input_data)
 
