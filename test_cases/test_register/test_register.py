@@ -37,7 +37,7 @@ class TestRegisterData:
     @staticmethod
     def generate_test_email(rows=5):
         form_input_datas = TestRegisterData.generate_form_data(rows)
-        form_input_datas.email = pd.Series(['Zachy.aslam@gmail.com', '', 'abc123', form_input_datas.email.iloc[3].split('.')[0], 'test123.com'])
+        form_input_datas.email = pd.Series(['Zachy.aslam@gmail.com', '', 'abc123', None, 'test123.com'])
         return form_input_datas.to_dict('records')
 
 class TestRegister:
@@ -86,6 +86,11 @@ class TestRegister:
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email(rows=5))
     def test_email(self, driver, form_input_data):
+
+        if form_input_data['email'] == None:
+            fake = Faker()
+            form_input_data['email'] = fake.unique.email().split("@")[0] + str(random.random())[2:] + "@" + fake.unique.email().split("@")[1]
+            form_input_data['email'] = form_input_data['email'].split('.')[0]
 
         self.fill_form(driver, form_input_data)
 
