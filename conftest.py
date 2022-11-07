@@ -19,7 +19,7 @@ def pytest_addoption(parser):
 def production(request):
     return request.config.getoption('--production')
 
-@pytest.fixture(params=open('browsers.txt', 'r').read().split(','))
+@pytest.fixture(params=os.environ['browsers'].split(','))
 def driver(request, production):
 
     browser = request.param

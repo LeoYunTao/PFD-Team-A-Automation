@@ -732,3 +732,9 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't fin
 1667732766961	geckodriver	INFO	Listening on 127.0.0.1:58889
 1667732771080	geckodriver	INFO	Listening on 127.0.0.1:58946
 1667732771764	geckodriver	INFO	Listening on 127.0.0.1:58955
+1667789062024	geckodriver	INFO	Listening on 127.0.0.1:60467
+1667789062427	geckodriver	INFO	Listening on 127.0.0.1:60472
+1667789062574	geckodriver	INFO	Listening on 127.0.0.1:60478
+1667789098429	geckodriver	INFO	Listening on 127.0.0.1:60918
+1667789100506	geckodriver	INFO	Listening on 127.0.0.1:60926
+1667789105603	geckodriver	INFO	Listening on 127.0.0.1:60986
