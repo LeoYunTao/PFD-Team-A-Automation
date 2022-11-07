@@ -3,7 +3,7 @@ import platform
 import os
 
 def main():
-    N_JOBS = 5
+    N_JOBS = 10
 
     os_browser = {
         'windows': ['chrome', 'firefox', 'edge'],
@@ -23,7 +23,7 @@ def main():
 
     os.environ['browsers'] = ','.join(os_browser[current_os])
 
-    retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}'])#, f'--html=reports/report.html'])
+    retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}', '--alluredir=allure-report/'])#, f'--html=reports/report.html'])
 
 if __name__ == '__main__':
     main()
