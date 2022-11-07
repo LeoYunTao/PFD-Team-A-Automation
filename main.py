@@ -23,7 +23,7 @@ def main():
 
     os.environ['browsers'] = ','.join(os_browser[current_os])
 
-    retcode = pytest.main(['test_cases/', '--production=false', f'-n {N_JOBS}'])#, f'--html=reports/report.html'])
+    retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}'])#, f'--html=reports/report.html'])
 
 if __name__ == '__main__':
     main()
