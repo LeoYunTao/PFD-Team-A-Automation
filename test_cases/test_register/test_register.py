@@ -1,9 +1,13 @@
 import pytest
+import allure
 
 from faker import Faker
 
 import random
 import pandas as pd
+import os
+
+from config import URL
 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -42,14 +46,22 @@ class TestRegisterData:
 
 class TestRegister:
 
+    @allure.step
     def fill_form(self, driver, form_input):
-        driver.get('https://uibank.uipath.com/register-account')
+        driver.get(URL['register'])
 
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.TAG_NAME, 'input'))
         )
 
-        form_fields = driver.find_elements(By.CSS_SELECTOR , 'input, select')
+        FILE_PATH = f'{random.random()}.png'
+
+        body = driver.find_element(By.TAG_NAME, 'body')
+        body.screenshot(FILE_PATH)
+        allure.attach.file(FILE_PATH, "Screenshot on page load", attachment_type=allure.attachment_type.PNG)
+        os.remove(FILE_PATH)
+
+        form_fields = driver.find_elements(By.CSS_SELECTOR, 'input, select')
 
         for form_field in form_fields:
             if form_field.get_attribute('name') not in form_input:
