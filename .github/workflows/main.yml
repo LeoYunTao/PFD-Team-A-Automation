@@ -40,11 +40,11 @@ jobs:
     - name: Run main.py
       run: |
         python main.py
-    - name: Upload allure report to artifacts
+    - name: Upload allure results to artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: allure-report
-        path: allure-report/
+        name: allure-results
+        path: allure-results/
   
   allure-upload:
     needs: build
@@ -65,5 +65,11 @@ jobs:
           # Allure report target dir
           report-dir: allure-report --clean
       - name: Generate allure report
+        run: |
           allure generate allure-results/* --clean
+      - name: Upload allure report to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report/
         
