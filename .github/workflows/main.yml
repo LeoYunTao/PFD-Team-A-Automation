@@ -42,18 +42,18 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.10"
       - name: Download allure-report from build
         uses: actions/download-artifact@v3
         with:
           name: allure-results
-      - name: Download allure and initialize allure report
+      - name: Install allure cli
         run: |
-          python allure_setup/allure_setup.py
+          sudo apt-add-repository ppa:qameta/allure
+          sudo apt-get update
+          sudo apt-get install allure
+      - name: Generate allure report
+        run: |
+          allure generate allure-results/* --clean
       - name: store allure report
         uses: actions/upload-artifact@v3
         with:
