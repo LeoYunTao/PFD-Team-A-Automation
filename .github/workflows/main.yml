@@ -46,6 +46,7 @@ jobs:
         path: allure-results/
   
   allure-upload:
+    name: Generate Allure Report and Deploy to Netlify
     needs: build
     runs-on: windows-latest
     
@@ -71,4 +72,12 @@ jobs:
         with:
           name: allure-report
           path: allure-report/
-        
+          
+      - name: Deploy to Netlify        
+        uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: r0_un4csR4RpFErHtHuNiq4yp5s_QNKBcV7a7G8QBhs
+          NETLIFY_SITE_ID: c9893677-95b7-4d68-a900-c5722f343b80
+          NETLIFY_DEPLOY_TO_PROD: true
+          build_directory: allure-report/
+
