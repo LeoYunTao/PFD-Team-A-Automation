@@ -24,6 +24,6 @@ def main():
     os.environ['browsers'] = ','.join(os_browser[current_os])
 
     retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}', '--alluredir=allure-report/'])#, f'--html=reports/report.html'])
-
+    #pytest test_cases/ -s -n 5 --csv tests.csv --csv-columns id, function, status, duration, parameters_as_columns
 if __name__ == '__main__':
     main()
