@@ -1,7 +1,6 @@
 import pytest
 
 import os
-import platform
 
 from selenium import webdriver
 from selenium.webdriver import chrome, firefox, edge
@@ -19,20 +18,6 @@ def pytest_addoption(parser):
 @pytest.fixture
 def production(request):
     return request.config.getoption('--production')
-
-@pytest.fixture
-def os_system(request):
-    current_os = platform.system()
-    if current_os == "Windows":
-        current_os = current_os.lower()
-    elif current_os == "Linux":
-        current_os = current_os.lower()
-    elif current_os == "Darwin":
-        current_os = "macos"
-    else:
-        raise Exception("OS not found")
-
-    return current_os
 
 @pytest.fixture(params=os.environ.get('browsers', 'chrome').split(','))
 def driver(request, production):

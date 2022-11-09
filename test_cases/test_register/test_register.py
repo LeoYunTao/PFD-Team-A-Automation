@@ -5,7 +5,7 @@ from faker import Faker
 
 import random
 import pandas as pd
-import os
+import platform
 
 from config import URL
 from selenium_actions import *
@@ -54,6 +54,7 @@ class TestRegister:
 
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_main(rows=5))
+    @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_main(self, os_system, driver, form_input_data):
 
         fake = Faker()
@@ -77,6 +78,7 @@ class TestRegister:
         driver.quit()
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email(rows=5))
+    @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_email(self, os_system, driver, form_input_data):
 
         if form_input_data['email'] == None:
