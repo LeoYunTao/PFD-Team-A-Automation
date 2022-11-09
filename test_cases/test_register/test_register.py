@@ -54,7 +54,7 @@ class TestRegister:
 
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_main(rows=5))
-    def test_main(self, driver, form_input_data):
+    def test_main(self, os_system, driver, form_input_data):
 
         fake = Faker()
 
@@ -77,7 +77,7 @@ class TestRegister:
         driver.quit()
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email(rows=5))
-    def test_email(self, driver, form_input_data):
+    def test_email(self, os_system, driver, form_input_data):
 
         if form_input_data['email'] == None:
             fake = Faker()

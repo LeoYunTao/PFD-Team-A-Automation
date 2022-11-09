@@ -26,6 +26,8 @@ def main():
     #allure generate allure-results/* --clean
     #allure open allure-report/
 
+    # allure-results -> allure-report
+
     retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}', f'--alluredir=allure-results/{current_os}/'])#, f'--html=reports/report.html'])
 
 if __name__ == '__main__':
