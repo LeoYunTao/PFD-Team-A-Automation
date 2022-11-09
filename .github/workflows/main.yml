@@ -28,15 +28,6 @@ jobs:
         python -m pip install pytest-xdist
         python -m pip install pandas
         python -m pip install allure-pytest
-    - name: Initialize allure report
-      # You may pin to the exact commit or the version.
-      # uses: afiore/action-allure-report@e43ebd6f4f4c74b07b1eb02f042902bbe6786a19
-      uses: afiore/action-allure-report@v0.1.0
-      with:
-        # Allure test result data dir
-        results-dir: allure-results/*
-        # Allure report target dir
-        report-dir: allure-report --clean
     - name: Run main.py
       run: |
         python main.py
