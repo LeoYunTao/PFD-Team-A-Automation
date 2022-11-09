@@ -42,23 +42,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: setup python
+        uses: actions/setup-python@v3
       - name: Download allure-report from build
         uses: actions/download-artifact@v3
         with:
-          name: allure-report
+          name: allure-results
       - name: Initialize allure report
-        # You may pin to the exact commit or the version.
-        # uses: afiore/action-allure-report@e43ebd6f4f4c74b07b1eb02f042902bbe6786a19
-        uses: afiore/action-allure-report@v0.1.0
-        with:
-          # Allure test result data dir
-          results-dir: allure-results/*
-          # Allure report target dir
-          report-dir: allure-report --clean
-      - name: Generate allure report
         run: |
-          allure generate allure-results/* --clean
-      - name: Upload allure report to artifacts
+          python allure_setup/allure_setup.py
+      - name: store allure report
         uses: actions/upload-artifact@v3
         with:
           name: allure-report
