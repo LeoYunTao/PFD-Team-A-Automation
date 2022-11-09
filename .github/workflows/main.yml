@@ -35,14 +35,14 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: allure-results
-        path: allure-results/
+        path: allure-results
   
   allure-upload:
     needs: build
     runs-on: windows-latest
     
     steps:
-      - name: Download allure-report from build
+      - name: Download allure-results from build
         uses: actions/download-artifact@v3
         with:
           name: allure-results
