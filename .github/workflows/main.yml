@@ -46,9 +46,9 @@ jobs:
         path: allure-results/
   
   allure-upload:
-    name: Generate Allure Report and Deploy to Netlify
+    name: Generate Allure Report
     needs: build
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v3
@@ -67,7 +67,7 @@ jobs:
         run: |
           allure generate allure-results/* --clean
       
-      - name: store allure report
+      - name: Store Allure Report
         uses: actions/upload-artifact@v3
         with:
           name: allure-report
