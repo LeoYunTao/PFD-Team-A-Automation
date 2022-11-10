@@ -1,5 +1,7 @@
 import pytest
 
+import os
+
 from selenium import webdriver
 from selenium.webdriver import chrome, firefox, edge
 
@@ -9,24 +11,18 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 def pytest_addoption(parser):
     parser.addoption(
-        '--browser', action='store', 
-        default='chrome', help='The browser to perform testing on'
-    )
-    parser.addoption(
         '--production', action='store', 
         default='false', help='See if the code is in production or testing mode'
     )
 
 @pytest.fixture
-def browser(request):
-    return request.config.getoption('--browser')
-
-@pytest.fixture
 def production(request):
     return request.config.getoption('--production')
 
-@pytest.fixture
-def driver(browser, production):
+@pytest.fixture(params=os.environ.get('browsers', 'chrome').split(','))
+def driver(request, production):
+
+    browser = request.param
 
     if browser == 'firefox':
         options = firefox.options.Options()
