@@ -23,7 +23,13 @@ def main():
 
     os.environ['browsers'] = ','.join(os_browser[current_os])
 
-    retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}', '--alluredir=allure-report/'])#, f'--html=reports/report.html'])
     #pytest test_cases/ -s -n 5 --csv testswindows.csv --csv-columns id, function, status, duration, message, parameters_as_columns
+    #allure generate allure-results/* --clean
+    #allure open allure-report/
+
+    # allure-results -> allure-report
+
+    retcode = pytest.main(['test_cases/', '--production=true', f'-n {N_JOBS}', f'--alluredir=allure-results/{current_os}/'])#, f'--html=reports/report.html'])
+
 if __name__ == '__main__':
     main()

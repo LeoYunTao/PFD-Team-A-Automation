@@ -2,6 +2,10 @@ name: Main Test
 
 on: [workflow_dispatch]
 
+defaults:
+  run:
+    working-directory: ./
+
 jobs:
   build:
 
@@ -14,10 +18,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -28,18 +34,11 @@ jobs:
         python -m pip install pytest-xdist
         python -m pip install pandas
         python -m pip install allure-pytest
-    - name: Initialize allure report
-      # You may pin to the exact commit or the version.
-      # uses: afiore/action-allure-report@e43ebd6f4f4c74b07b1eb02f042902bbe6786a19
-      uses: afiore/action-allure-report@v0.1.0
-      with:
-        # Allure test result data dir
-        results-dir: allure-results/*
-        # Allure report target dir
-        report-dir: allure-report --clean
+    
     - name: Run main.py
       run: |
         python main.py
+    
     - name: Upload allure results to artifacts
       uses: actions/upload-artifact@v3
       with:
@@ -47,29 +46,38 @@ jobs:
         path: allure-results/
   
   allure-upload:
+    name: Generate Allure Report
     needs: build
     runs-on: ubuntu-latest
     
     steps:
-      - name: Download allure-report from build
+      - uses: actions/checkout@v3
+
+      - name: Download allure-results from build
         uses: actions/download-artifact@v3
         with:
-          name: allure-report
-      - name: Initialize allure report
-        # You may pin to the exact commit or the version.
-        # uses: afiore/action-allure-report@e43ebd6f4f4c74b07b1eb02f042902bbe6786a19
-        uses: afiore/action-allure-report@v0.1.0
-        with:
-          # Allure test result data dir
-          results-dir: allure-results/*
-          # Allure report target dir
-          report-dir: allure-report --clean
+          name: allure-results
+          path: allure-results/
+      
+      - name: Install allure cli
+        run: |
+          npm install -g allure-commandline --save-dev
+      
       - name: Generate allure report
         run: |
           allure generate allure-results/* --clean
-      - name: Upload allure report to artifacts
+      
+      - name: Store Allure Report
         uses: actions/upload-artifact@v3
         with:
           name: allure-report
           path: allure-report/
-        
+          
+      - name: Deploy to Netlify        
+        uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: r0_un4csR4RpFErHtHuNiq4yp5s_QNKBcV7a7G8QBhs
+          NETLIFY_SITE_ID: c9893677-95b7-4d68-a900-c5722f343b80
+          NETLIFY_DEPLOY_TO_PROD: true
+          build_directory: allure-report/
+

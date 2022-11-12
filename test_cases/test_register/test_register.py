@@ -1,9 +1,14 @@
 import pytest
+import allure
 
 from faker import Faker
 
 import random
 import pandas as pd
+import platform
+
+from config import URL
+from selenium_actions import *
 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -42,66 +47,58 @@ class TestRegisterData:
 
 class TestRegister:
 
-    def fill_form(self, driver, form_input):
-        driver.get('https://uibank.uipath.com/register-account')
+    def common_steps(self, selenium_actions, form_input_data):
+        selenium_actions.load_page(URL['register'], By.TAG_NAME, 'input')
 
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.TAG_NAME, 'input'))
-        )
+        selenium_actions.fill_form(form_input_data)
 
-        form_fields = driver.find_elements(By.CSS_SELECTOR , 'input, select')
-
-        for form_field in form_fields:
-            if form_field.get_attribute('name') not in form_input:
-                continue
-            value_to_enter = form_input[form_field.get_attribute('name')]
-
-            if form_field.tag_name == 'input':
-                form_field.send_keys(str(value_to_enter))
-            else:
-                Select(form_field).select_by_index(value_to_enter)
-
-        submit_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
-        submit_button.click()
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_main(rows=5))
-    def test_main(self, driver, form_input_data):
+    @pytest.mark.parametrize("os_system", [platform.platform()])
+    def test_main(self, os_system, driver, form_input_data):
 
         fake = Faker()
 
         form_input_data['username'] = fake.unique.user_name() + str(random.random())[2:]
         form_input_data['email'] = fake.unique.email().split("@")[0] + str(random.random())[2:] + "@" + fake.unique.email().split("@")[1]
 
-        self.fill_form(driver, form_input_data)
+        selenium_actions = SeleniumActions(driver)
 
-        try: 
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, '//p[text()="Check your inbox for a verification link."]'))
-            )
-        except:
+        self.common_steps(selenium_actions, form_input_data)
+
+        if not selenium_actions.is_element_located(By.XPATH, '//p[text()="Check your inbox for a verification link."]'):
+            selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
+                image_description='Screenshot on failure')
             driver.quit()
             assert False, "Registration Failed"
-
+        else:
+            selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
+                image_description='Screenshot on success')
+        
         driver.quit()
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email(rows=5))
-    def test_email(self, driver, form_input_data):
+    @pytest.mark.parametrize("os_system", [platform.platform()])
+    def test_email(self, os_system, driver, form_input_data):
 
         if form_input_data['email'] == None:
             fake = Faker()
             form_input_data['email'] = fake.unique.email().split("@")[0] + str(random.random())[2:] + "@" + fake.unique.email().split("@")[1]
             form_input_data['email'] = form_input_data['email'].split('.')[0]
 
-        self.fill_form(driver, form_input_data)
+        selenium_actions = SeleniumActions(driver)
+        
+        self.common_steps(selenium_actions, form_input_data)
 
-        try: 
-            WebDriverWait(driver, 5).until(
-                EC.alert_is_present()
-            )
+        if selenium_actions.is_alert_present():
             driver.switch_to.alert.dismiss()
-        except:
+            selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
+                image_description='Screenshot on success')
             driver.quit()
-            assert False, f"Email validation failed: {form_input_data['email']}"
+            return
 
-
+        selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
+                image_description='Screenshot on failure')
         driver.quit()
+        assert False, f"Email validation failed: {form_input_data['email']}"
+
