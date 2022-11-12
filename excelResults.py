@@ -1,6 +1,11 @@
 import pandas as pd
-df_new = pd.read_csv('tests.csv')
-df_new.to_excel("Test Results.xlsx")
-# # saving xlsx file
-# GFG = pd.ExcelWriter('Test Results.xlsx', engine="openpyxl",mode='a')
-# df_new.to_excel(GFG, index=False)
+import time
+timestr = time.strftime("%Y%m%d-%H%M%S")
+df_windows = pd.read_csv('testswindows.csv')
+df_linux = pd.read_csv('testslinux.csv')
+df_mac = pd.read_csv('testsmac.csv')
+with pd.ExcelWriter("Test_Results_"+timestr+".xlsx") as writer:
+    df_windows.to_excel(writer, sheet_name="Windows")
+    df_linux.to_excel(writer, sheet_name="Linux")
+    df_mac.to_excel(writer, sheet_name="Mac")
+
