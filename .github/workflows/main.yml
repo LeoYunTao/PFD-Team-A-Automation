@@ -103,6 +103,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install pandas
+          python -m pip install openpyxl
 
       - name: Download csv-reports from build
         uses: actions/download-artifact@v3
