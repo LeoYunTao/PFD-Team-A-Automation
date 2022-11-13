@@ -8,6 +8,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver import chrome
 from selenium.common.exceptions import NoSuchElementException
 
+
+
 # log in credentials
 username = "Terrence"
 password = "T0491211F"
