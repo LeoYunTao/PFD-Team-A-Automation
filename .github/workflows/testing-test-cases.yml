@@ -13,18 +13,18 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest 
-    name: Test changed-files
+    name: Test Changed Test Cases
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0 
 
-      - name: Get changed files in the docs folder
+      - name: Get changed files in the test_cases folder
         id: changed-files-specific
         uses: tj-actions/changed-files@v34
         with:
           files: |
-            test_cases/**
+            test_cases/**/*.py
 
       - name: List all changed files
         run: |
