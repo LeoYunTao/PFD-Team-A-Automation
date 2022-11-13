@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest 
     name: Test Changed Test Cases
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3  
+        with:
+          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
 
       - name: Get changed files in the test_cases folder
         id: changed-files-specific
