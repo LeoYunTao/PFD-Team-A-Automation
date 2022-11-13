@@ -16,9 +16,9 @@ jobs:
       - name: Get changed files in the test_cases folder
         id: changed-files-specific
         uses: tj-actions/changed-files@v34
-        with:
-          files: |
-            test_cases/**/*.py
+        #with:
+         # files: |
+          #  test_cases/**/*.py
 
       - name: List all changed files
         run: |
