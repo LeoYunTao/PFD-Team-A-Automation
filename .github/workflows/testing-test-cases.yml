@@ -31,7 +31,7 @@ jobs:
           python -m pip install pandas
 
       - name: Test Modified or Added Test Cases
-      - id: files
+        id: files
         uses: jitterbit/get-changed-files@v1
       - run: |
           for changed_file in ${{ steps.files.outputs.added_modified }}; do
