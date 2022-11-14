@@ -121,3 +121,25 @@ jobs:
           name: excel-report
           path: excel-report/
 
+  send-email:
+    name: Send Email Report
+    needs: [allure-upload, excel-report]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Download excel-report
+        uses: actions/download-artifact@v3
+        with:
+          name: excel-report
+          path: excel-report/
+
+      - name: Send Email
+        run: |
+          python email_report/send_email_report.py
