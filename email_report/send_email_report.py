@@ -1,5 +1,15 @@
-from email_report.my_email import email_mine , password_mine
-from email_report.email_addresses import email1 #,email2
+from my_email import email_mine , password_mine
+from email_addresses import email1 #,email2
+
+#Added this so that we can import config file
+
+import os
+import sys
+import inspect
+
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir) 
 
 from config import excel_report_path
 
