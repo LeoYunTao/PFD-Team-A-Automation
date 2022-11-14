@@ -6,6 +6,10 @@ on:
       - main
       - testing-test-cases
 
+defaults:
+  run:
+    working-directory: ./test_cases/
+
 jobs:
   build:
     runs-on: ubuntu-latest 
