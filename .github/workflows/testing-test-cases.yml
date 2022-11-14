@@ -1,10 +1,10 @@
 name: Testing Test Cases
 
 on: 
-  workflow_dispatch:
-#   push:
-#     branches:
-#       - main
+  push:
+    branches:
+      - main
+      - testing-test-cases
 
 jobs:
   build:
