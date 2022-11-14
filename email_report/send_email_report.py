@@ -1,6 +1,8 @@
 from email_report.my_email import email_mine , password_mine
 from email_report.email_addresses import email1 #,email2
 
+from config import excel_report_path
+
 import smtplib, ssl
 import glob
 
@@ -21,7 +23,7 @@ message["Subject"] = subject
 # Add body to email
 #message.attach(MIMEText(body, "plain"))
 
-filename = glob.glob("excel-report/*.xlsx")[0]
+filename = glob.glob(f"{excel_report_path}/*.xlsx")[0]
 
 # Open Excel file in binary mode
 with open(filename, "rb") as attachment:

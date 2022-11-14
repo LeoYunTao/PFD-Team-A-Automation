@@ -1,3 +1,5 @@
+#Config files containing the URL and directory
+
 DOMAIN_NAME = "https://uibank.uipath.com"
 
 URL = {
@@ -5,3 +7,7 @@ URL = {
     "login": DOMAIN_NAME,
     "forgot_password": DOMAIN_NAME + "/password-request",
 }
+
+allure_results_path = "allure-results"
+csv_reports_path = "csv-reports"
+excel_report_path = "excel-report"
