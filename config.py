@@ -10,6 +10,7 @@ URL = {
     "main": DOMAIN_NAME + "/accounts",
     "transfer_money": DOMAIN_NAME + "/transfer-money",
     "transfer_result": DOMAIN_NAME + "/transfer-result",
+    "loan": DOMAIN_NAME + "/loans/apply"
 }
 
 allure_results_path = "allure-results"
