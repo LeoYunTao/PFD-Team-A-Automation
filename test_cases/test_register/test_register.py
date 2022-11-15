@@ -39,8 +39,8 @@ class TestRegisterData:
         return TestRegisterData.generate_form_data(rows).to_dict('records')
 
     @staticmethod
-    def generate_test_email(rows=5):
-        form_input_datas = TestRegisterData.generate_form_data(rows)
+    def generate_test_email():
+        form_input_datas = TestRegisterData.generate_form_data(5)
         form_input_datas.email = pd.Series(['Zachy.aslam@gmail.com', '', 'abc123', None, 'test123.com'])
         return form_input_datas.to_dict('records')
 
@@ -76,7 +76,7 @@ class TestRegister:
         
         driver.quit()
 
-    @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email(rows=5))
+    @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email())
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_email(self, os_system, driver, form_input_data):
 
@@ -89,15 +89,16 @@ class TestRegister:
         
         self.common_steps(selenium_actions, form_input_data)
 
-        if selenium_actions.is_alert_present():
+        is_alert_present = selenium_actions.is_alert_present()
+
+        if is_alert_present:
             driver.switch_to.alert.dismiss()
             selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
                 image_description='Screenshot on success')
-            driver.quit()
-            return
-
-        selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
-                image_description='Screenshot on failure')
+        else:
+            selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
+                    image_description='Screenshot on failure')
+        
         driver.quit()
-        assert False, f"Email validation failed: {form_input_data['email']}"
+        assert is_alert_present, f"Email validation failed: {form_input_data['email']}"
 

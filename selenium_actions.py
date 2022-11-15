@@ -110,7 +110,7 @@ class SeleniumActions():
 
         self.fill_form(login_details)
 
-        if self.is_element_located(By.XPATH, '//h3[text()="Welcome!"]'):
+        if self.is_element_located(By.XPATH, '//h3[text()=" Welcome! "]'):
             self.upload_screenshot(tmp_file_path=f'{random.random()}.png', image_description='Login Success')
         else:
             self.upload_screenshot(tmp_file_path=f'{random.random()}.png',

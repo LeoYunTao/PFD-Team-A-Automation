@@ -49,15 +49,15 @@ class TestTransferFunds:
         selenium_actions.is_element_located(By.XPATH, '//h3[text()="Transfer Money"]')
         assert URL['transfer_money'] == driver.current_url
 
+    @pytest.mark.parametrize("transfer_money_form", TestTransferFundsData.get_transfer_money_form())
     @pytest.mark.parametrize("login_details", TestTransferFundsData.get_login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
-    def test_main(self, os_system, driver, login_details):
+    def test_main(self, os_system, driver, login_details, transfer_money_form):
         selenium_actions = SeleniumActions(driver)
 
         self.common_steps(selenium_actions, driver, login_details)
 
-        selenium_actions.fill_form(
-            TestTransferFundsData.get_transfer_money_form()[0])
+        selenium_actions.fill_form(transfer_money_form)
 
         time.sleep(1)
 
@@ -74,15 +74,15 @@ class TestTransferFunds:
 
         driver.quit()
 
+    @pytest.mark.parametrize("transfer_money_form", TestTransferFundsData.get_test_amount())
     @pytest.mark.parametrize("login_details", TestTransferFundsData.get_login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
-    def test_amount(self, os_system, driver, login_details):
+    def test_amount(self, os_system, driver, login_details, transfer_money_form):
         selenium_actions = SeleniumActions(driver)
 
         self.common_steps(selenium_actions, driver, login_details)
 
-        selenium_actions.fill_form(
-            TestTransferFundsData.get_test_amount()[0])
+        selenium_actions.fill_form(transfer_money_form)
 
         time.sleep(1)
 
