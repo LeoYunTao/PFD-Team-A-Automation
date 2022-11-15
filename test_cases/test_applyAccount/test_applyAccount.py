@@ -22,10 +22,10 @@ class TestApplyAccount:
         applyAccountPage.click()
 
         # find username/email field and send the username itself to the input field
-        # driver.find_element(By.ID, "accountNickname").send_keys(nickname)
-        # # find password input field and insert password as well
-        # dropdown = Select(driver.find_element(By.ID, "typeOfAccount"))
-        # dropdown.select_by_value('checking')
+        driver.find_element(By.ID, "accountNickname").send_keys(nickname)
+        # find password input field and insert password as well
+        dropdown = Select(driver.find_element(By.ID, "typeOfAccount"))
+        dropdown.select_by_value('checking')
 
         # click apply button
         submit_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
