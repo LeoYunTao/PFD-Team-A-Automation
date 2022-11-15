@@ -26,9 +26,9 @@ body = "These are the test case results"
 # Create a multipart message and set headers
 message = MIMEMultipart()
 message["From"] = email_mine
-message["To"] = email1
+message["To"] = ", ".join(email1) #for multiple
 message["Subject"] = subject
-#message["Bcc"] = email1  # Recommended for mass emails
+
 
 # Add body to email
 #message.attach(MIMEText(body, "plain"))
@@ -60,7 +60,7 @@ html = """\
        <a href="https://alluringreport.netlify.app/">Allure Report</a> 
     </p>
     <br><br>
-    <div>Here is the link to the Allure Report and Excel File</div>
+    <divHello! The test results that have been generated may be accessed via the attached Excel File or the above link for the Allure report</div>
   </body>
 </html>
 """
