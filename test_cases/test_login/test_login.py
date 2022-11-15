@@ -1,4 +1,8 @@
 import pytest
+
+from config import URL
+from selenium_actions import *
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,10 +13,10 @@ class TestApplyLoan:
     def test_login(self, driver):
         # log in credentials
         username = "Terrence"
-        password = "T049111F"
+        password = "T0491211F"
 
-        # head to github login page
-        driver.get("https://uibank.uipath.com/login")
+        selenium_actions = SeleniumActions(driver)
+        selenium_actions.load_page(URL['login'], By.TAG_NAME, 'input')
         # find username/email field and send the username itself to the input field
         driver.find_element(By.ID, "username").send_keys(username)
         # find password input field and insert password as well

@@ -6,6 +6,7 @@ import random
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
+from config import URL
 
 
 class SeleniumActions():
@@ -92,5 +93,19 @@ class SeleniumActions():
 
     @allure.step
     def submit_form(self):
+        submit_button = self.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
+        submit_button.click()
+
+    def login(self):
+        username = "Terrence"
+        password = "T0491211F"
+
+        self.load_page(URL['login'], By.TAG_NAME, 'input')
+        # find username/email field and send the username itself to the input field
+        self.driver.find_element(By.ID, "username").send_keys(username)
+        # find password input field and insert password as well
+        self.driver.find_element(By.ID, "password").send_keys(password)
+
+        # click login button
         submit_button = self.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
         submit_button.click()
