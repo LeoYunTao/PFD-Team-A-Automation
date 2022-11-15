@@ -1,4 +1,6 @@
 import pytest
+import platform
+import pandas as pd
 
 from config import URL
 from selenium_actions import *
@@ -9,41 +11,46 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import Select
 
+class Form:
+    @staticmethod
+    def login_details():
+        return pd.DataFrame({
+            'username': ["Terrence"],
+            'password': ["T0491211F"],
+        }).to_dict("records")
 
+    @staticmethod
+    def account_details():
+        return pd.DataFrame({
+            'accountNickname': ["Test"],
+            'typeOfAccount': [0],
+        }).to_dict("records")
 class TestApplyAccount:
-    def test_applyAccount(self, driver):
-        # log in credentials
-        nickname = "test"
+    @pytest.mark.parametrize("form_input_data", Form.login_details())
+    @pytest.mark.parametrize("os_system", [platform.platform()])
+    def test_applyAccount(self, driver, os_system, form_input_data):
 
         selenium_actions = SeleniumActions(driver)
-        selenium_actions.login()
+        selenium_actions.login(form_input_data)
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'div[tabindex="0"]')))
         applyAccountPage = driver.find_element(By.CSS_SELECTOR, 'div[tabindex="0"]')
         applyAccountPage.click()
 
-        # find username/email field and send the username itself to the input field
-        driver.find_element(By.ID, "accountNickname").send_keys(nickname)
-        # find password input field and insert password as well
-        dropdown = Select(driver.find_element(By.ID, "typeOfAccount"))
-        dropdown.select_by_value('checking')
+        selenium_actions.fill_form(Form.account_details()[0])
 
-        # click apply button
-        submit_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
-        submit_button.click()
-        # if selenium_actions.is_element_located(By.ID, "accountId"):
-        #
-        #     # check if the log in has failed by locating the log in error message
-        #     if driver.find_element(By.ID, "accountId").text == '0':
-        #         assert False
-        #     else:
-        #         assert True
         try:
             WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, 'accountId')))
         except TimeoutException:
             assert False
+            selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png',
+                image_description='application failed')
         else:
             if driver.find_element(By.ID, "accountId").text == '0':
                 assert False
+                selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png',
+                image_description='application failed')
             else:
                 assert True
+                selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png',
+                image_description='screenshot on success')
         driver.quit()
