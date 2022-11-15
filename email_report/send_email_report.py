@@ -60,7 +60,7 @@ html = """\
        <a href="https://alluringreport.netlify.app/">Allure Report</a> 
     </p>
     <br><br>
-    <divHello! The test results that have been generated may be accessed via the attached Excel File or the above link for the Allure report</div>
+    <div>Hello! The test results that have been generated may be accessed via the attached Excel File or the above link for the Allure report</div>
   </body>
 </html>
 """
