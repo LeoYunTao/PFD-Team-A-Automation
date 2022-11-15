@@ -16,7 +16,10 @@ for file in glob.glob(f'{csv_reports_path}/*.csv'):
 if not os.path.exists(f'{excel_report_path}'):
    os.makedirs(f'{excel_report_path}')
 
+with pd.ExcelWriter("Test_Results_"+timestr+".xlsx") as writer:
+    pd.concat(df_test_results).to_excel(writer,sheet_name="Test Results",index=False)
+
 # convert it into excel file
-with pd.ExcelWriter(f"{excel_report_path}/Test_Results_" + timestr + ".xlsx") as writer:
-    for df_test_result in df_test_results:
-        df_test_result.to_excel(writer, sheet_name=df_test_result['os_system'].iloc[0])
+# with pd.ExcelWriter(f"{excel_report_path}/Test_Results_" + timestr + ".xlsx") as writer:
+#     for df_test_result in df_test_results:
+#         df_test_result.to_excel(writer, sheet_name=df_test_result['os_system'].iloc[0],index=False)
