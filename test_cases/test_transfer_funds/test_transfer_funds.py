@@ -42,12 +42,7 @@ class TestTransferFundsData:
 class TestTransferFunds:
 
     def common_steps(self, selenium_actions, driver, login_details):
-        selenium_actions.load_page(URL['login'], By.TAG_NAME, 'input')
-
-        selenium_actions.fill_form(login_details)
-
-        selenium_actions.is_element_located(By.XPATH, '//h3[text()="Welcome!"]')
-        assert 'https://uibank.uipath.com/accounts' == driver.current_url
+        selenium_actions.login(login_details)
 
         driver.find_element(By.XPATH, '//a[@href="/transfer-money"]').click()
 

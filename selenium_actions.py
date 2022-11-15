@@ -3,6 +3,8 @@ import allure
 import os
 import random
 
+from config import URL
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
@@ -102,8 +104,19 @@ class SeleniumActions():
         
         submit_button.click()
 
+<<<<<<< Updated upstream
     def login(self, form_input_data):
 
         self.load_page(URL['login'], By.TAG_NAME, 'input')
         # find username/email field and send the username itself to the input field
         self.fill_form(form_input_data)
+=======
+    @allure.step
+    def login(self, driver, login_details):
+        self.load_page(URL['login'], By.TAG_NAME, 'input')
+
+        self.fill_form(login_details)
+
+        self.is_element_located(By.XPATH, '//h3[text()="Welcome!"]')
+        assert 'https://uibank.uipath.com/accounts' == driver.current_url
+>>>>>>> Stashed changes
