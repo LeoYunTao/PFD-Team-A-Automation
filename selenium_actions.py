@@ -6,6 +6,7 @@ import random
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
+from config import URL
 
 
 class SeleniumActions():
@@ -100,3 +101,9 @@ class SeleniumActions():
             submit_button = self.driver.find_element(By.XPATH, custom_xpath)
         
         submit_button.click()
+
+    def login(self, form_input_data):
+
+        self.load_page(URL['login'], By.TAG_NAME, 'input')
+        # find username/email field and send the username itself to the input field
+        self.fill_form(form_input_data)
