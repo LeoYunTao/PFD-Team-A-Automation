@@ -4,7 +4,7 @@ DOMAIN_NAME = "https://uibank.uipath.com"
 
 URL = {
     "register": DOMAIN_NAME + "/register-account",
-    "login": DOMAIN_NAME,
+    "login": DOMAIN_NAME + "/login",
     "forgot_password": DOMAIN_NAME + "/password-request",
 }
 

@@ -1,5 +1,4 @@
 import pytest
-import allure
 
 from faker import Faker
 

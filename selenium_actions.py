@@ -66,7 +66,7 @@ class SeleniumActions():
         Next through all the element and key in the value.
         Submit after filling through all the values
 
-        form_input - a dictionary where the key must contain the name of the input tag
+        form_input - a dictionary where the key must contain the *name of the input tag*
         '''
 
         form_fields = self.driver.find_elements(By.CSS_SELECTOR, 'input, select')
@@ -91,6 +91,12 @@ class SeleniumActions():
             Select(form_field).select_by_index(value_to_enter)
 
     @allure.step
-    def submit_form(self):
-        submit_button = self.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
+    def submit_form(self, custom_xpath=None):
+        submit_button = None
+        
+        if custom_xpath == None:
+            submit_button = self.driver.find_element(By.XPATH, '//button[@type="submit" or @data-toggle="modal"]')
+        else:
+            submit_button = self.driver.find_element(By.XPATH, custom_xpath)
+        
         submit_button.click()
