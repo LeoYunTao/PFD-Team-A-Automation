@@ -6,6 +6,7 @@ from faker import Faker
 import random
 import pandas as pd
 import platform
+import csv
 
 from config import URL
 from selenium_actions import *
