@@ -1,9 +1,12 @@
-import pandas as pd
 import pytest
+
+import pandas as pd
 import platform
 
-from config import URL
+from faker import Faker
+
 from selenium_actions import *
+from config import URL
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -19,21 +22,30 @@ class Form:
             'password': ["T0491211F"],
         }).to_dict("records")
 
-class TestLogIn:
+    @staticmethod
+    def generate_test_password():
+        fake = Faker()
+
+        return pd.DataFrame({
+            'username': ["yt"],
+            'password': [fake.unique.password()],
+        }).to_dict("records")
+
+class TestLogin:
     @pytest.mark.parametrize("form_input_data", Form.login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
-    def test_loginTest(self, driver, os_system, form_input_data):
+    def test_main(self, driver, os_system, form_input_data):
         selenium_actions = SeleniumActions(driver)
         selenium_actions.login(form_input_data)
-        try:
-            WebDriverWait(driver, 2).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'div[style="color: red"]')))
-        except TimeoutException:
-            selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', image_description='Screenshot on success')
-            assert True
-        else:
-            assert False
-            selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png',
-                image_description='Log in failed')
-        finally:
-            # close the driver
-            driver.quit()
+
+        assert URL['main'] == driver.current_url
+        driver.quit()
+
+    @pytest.mark.parametrize("form_input_data", Form.generate_test_password())
+    @pytest.mark.parametrize("os_system", [platform.platform()])
+    def test_password(self, driver, os_system, form_input_data):
+        selenium_actions = SeleniumActions(driver)
+        selenium_actions.login(form_input_data)
+
+        assert URL['main'] != driver.current_url
+        driver.quit()

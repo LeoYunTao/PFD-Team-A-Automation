@@ -7,6 +7,9 @@ URL = {
     "login": DOMAIN_NAME + "/login",
     "status": DOMAIN_NAME + "/loans/lookup",
     "forgot_password": DOMAIN_NAME + "/password-request",
+    "main": DOMAIN_NAME + "/accounts",
+    "transfer_money": DOMAIN_NAME + "/transfer-money",
+    "transfer_result": DOMAIN_NAME + "/transfer-result",
 }
 
 allure_results_path = "allure-results"

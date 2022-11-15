@@ -47,7 +47,7 @@ class TestTransferFunds:
         driver.find_element(By.XPATH, '//a[@href="/transfer-money"]').click()
 
         selenium_actions.is_element_located(By.XPATH, '//h3[text()="Transfer Money"]')
-        assert 'https://uibank.uipath.com/transfer-money' == driver.current_url
+        assert URL['transfer_money'] == driver.current_url
 
     @pytest.mark.parametrize("login_details", TestTransferFundsData.get_login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
@@ -70,7 +70,7 @@ class TestTransferFunds:
             selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
                 image_description='Screenshot on failure')
         
-        assert 'https://uibank.uipath.com/transfer-result' == driver.current_url
+        assert URL['transfer_result'] == driver.current_url
 
         driver.quit()
 
@@ -95,7 +95,7 @@ class TestTransferFunds:
             selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
                 image_description='Screenshot on success')
         
-        assert 'https://uibank.uipath.com/transfer-result' != driver.current_url
+        assert URL['transfer_result'] != driver.current_url
 
         driver.quit()
 
