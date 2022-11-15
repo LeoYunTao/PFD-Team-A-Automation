@@ -26,7 +26,7 @@ body = "These are the test case results"
 # Create a multipart message and set headers
 message = MIMEMultipart()
 message["From"] = email_mine
-message["To"] = email1 #for multiple    ", ".join(email1)
+message["To"] = ", ".join(email1) #for multiple
 message["Subject"] = subject
 
 
