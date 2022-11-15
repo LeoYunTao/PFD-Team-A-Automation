@@ -3,8 +3,7 @@ name: Testing Test Cases
 on: 
   push:
     branches:
-      - main
-      - testing-test-cases
+      - "**"
 
 defaults:
   run:
