@@ -15,13 +15,13 @@ from config import excel_report_path
 
 import smtplib, ssl
 import glob
-
+from datetime import date
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-subject = "Excel report of test cases"
+subject = "Test Case Results for "+date.today().strftime("%d/%m/%Y")
 body = "These are the test case results"
 # Create a multipart message and set headers
 message = MIMEMultipart()
@@ -56,11 +56,16 @@ part.add_header(
 html = """\
 <html>
   <body>
+  
+    <div>Hi user,
+The test cases have been run successfully.You can view the excel report in the attachment and the Allure report in the link provided.</div>
+    <br><br>
     <p>
        <a href="https://alluringreport.netlify.app/">Allure Report</a> 
     </p>
     <br><br>
-    <div>Hello! The test results that have been generated may be accessed via the attached Excel File or the above link for the Allure report</div>
+    <div>Thank you,PFD Automation Team A</div>
+    
   </body>
 </html>
 """
