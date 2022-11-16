@@ -33,7 +33,7 @@ jobs:
         python -m pip install webdriver-manager
         python -m pip install Faker
         python -m pip install pytest
-        python -m pip install pytest-xdist
+        python -m pip install pytest-xdist[psutil]
         python -m pip install pytest-csv
         python -m pip install pandas
         python -m pip install allure-pytest
