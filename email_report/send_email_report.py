@@ -57,14 +57,14 @@ html = """\
 <html>
   <body>
   
-    <div>Hi user,
-The test cases have been run successfully.You can view the excel report in the attachment and the Allure report in the link provided.</div>
-    <br><br>
+    <div>Hi user, <br><br>
+The test cases have been run successfully.<br>
+You can view the excel report in the attachment and the Allure report in the link provided.</div>
     <p>
        <a href="https://alluringreport.netlify.app/">Allure Report</a> 
     </p>
-    <br><br>
-    <div>Thank you,PFD Automation Team A</div>
+    <div>Thank you, <br>
+    PFD Automation Team A</div>
     
   </body>
 </html>
