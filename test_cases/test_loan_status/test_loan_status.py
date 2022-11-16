@@ -46,7 +46,7 @@ class TestLoanStatus:
 
         assert is_view_loan_detail_successful
 
-    @pytest.mark.parametrize("form_input_data", Form.generate_false_id(rows=5))
+    @pytest.mark.parametrize("form_input_data", Form.generate_false_id(rows=int(os.environ['repeat'])))
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_quote_id(self, driver, os_system, form_input_data):
         selenium_actions = SeleniumActions(driver)

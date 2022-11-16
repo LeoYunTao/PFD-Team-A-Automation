@@ -49,7 +49,7 @@ class TestForgotPassword:
 
         assert is_email_reset_successful
 
-    @pytest.mark.parametrize('form_input_data', TestForgotPasswordData.generate_test_email(rows=5))
+    @pytest.mark.parametrize('form_input_data', TestForgotPasswordData.generate_test_email(rows=int(os.environ['repeat'])))
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_email(self, driver, os_system, form_input_data):
 

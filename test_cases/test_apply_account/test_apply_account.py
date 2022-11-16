@@ -3,6 +3,8 @@ import platform
 import pandas as pd
 import time
 
+import os
+
 from faker import Faker
 import random
 
@@ -45,7 +47,7 @@ class TestApplyAccount:
 
         selenium_actions.fill_form(form_input_data)
 
-    @pytest.mark.parametrize("form_input_data", Form.account_details(rows=5))
+    @pytest.mark.parametrize("form_input_data", Form.account_details(rows=int(os.environ['repeat'])))
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_main(self, driver, os_system, login_details, form_input_data):
 

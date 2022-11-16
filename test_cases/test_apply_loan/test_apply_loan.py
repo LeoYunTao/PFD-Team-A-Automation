@@ -46,7 +46,7 @@ class TestApplyLoan:
 
         selenium_actions.fill_form(form_input_data)
 
-    @pytest.mark.parametrize("form_input_data", TestLoanData.generate_test_main(rows=1))
+    @pytest.mark.parametrize("form_input_data", TestLoanData.generate_test_main(rows=int(os.environ['repeat'])))
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_main(self, os_system, driver, form_input_data):
 
@@ -73,7 +73,7 @@ class TestApplyLoan:
         driver.quit()
         assert is_loan_approved, "Loan Application Failed"
 
-    @pytest.mark.parametrize("form_input_data", TestLoanData.generate_test_age(rows=1))
+    @pytest.mark.parametrize("form_input_data", TestLoanData.generate_test_age(rows=int(os.environ['repeat'])))
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_age(self, os_system, driver, form_input_data):
 

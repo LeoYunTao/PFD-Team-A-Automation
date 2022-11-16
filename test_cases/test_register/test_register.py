@@ -53,7 +53,7 @@ class TestRegister:
         selenium_actions.fill_form(form_input_data)
 
 
-    @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_main(rows=5))
+    @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_main(rows=int(os.environ['repeat'])))
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_main(self, os_system, driver, form_input_data):
 

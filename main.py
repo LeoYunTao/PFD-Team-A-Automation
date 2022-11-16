@@ -25,6 +25,10 @@ def main():
 
     os.environ['browsers'] = ','.join(os_browser[current_os])
 
+    REPEAT = 15
+
+    os.environ['repeat'] = str(REPEAT)
+
     #pytest test_cases/ -s -n 5 --csv testswindows.csv --csv-columns id, function, status, duration, message, parameters_as_columns
     #allure generate allure-results/* --clean
     #allure open allure-report/
