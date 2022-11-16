@@ -36,7 +36,7 @@ def main():
     # allure-results -> allure-report
 
     retcode = pytest.main(['test_cases/', '--production=true', 
-        f'-n {N_JOBS}', f'--alluredir={allure_results_path}/{current_os}/',
+        f'-nlogical', f'--alluredir={allure_results_path}/{current_os}/',
         f'--csv={csv_reports_path}/test_{current_os}.csv', '--csv-columns=id, function, status, duration, message, parameters_as_columns'])
     #pytest test_cases/ -s -n 5 --csv csv-reports/testswindows.csv --csv-columns id, function, status, duration, message, parameters_as_columns
 
