@@ -66,16 +66,17 @@ class TestRegister:
 
         self.common_steps(selenium_actions, form_input_data)
 
-        if not selenium_actions.is_element_located(By.XPATH, '//p[text()="Check your inbox for a verification link."]'):
+        is_register_successful = selenium_actions.is_element_located(By.XPATH, '//p[text()="Check your inbox for a verification link."]')
+
+        if not is_register_successful:
             selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
                 image_description='Screenshot on failure')
-            driver.quit()
-            assert False, "Registration Failed"
         else:
             selenium_actions.upload_screenshot(tmp_file_path=f'{random.random()}.png', 
                 image_description='Screenshot on success')
         
         driver.quit()
+        assert is_register_successful, "Registration Failed"
 
     @pytest.mark.parametrize("form_input_data", TestRegisterData.generate_test_email())
     @pytest.mark.parametrize("os_system", [platform.platform()])
