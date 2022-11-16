@@ -46,7 +46,7 @@ class SeleniumActions():
 
     def is_alert_present(self):
         try: 
-            WebDriverWait(self.driver, 5).until(
+            WebDriverWait(self.driver, 10).until(
                 EC.alert_is_present()
             )
         except:
