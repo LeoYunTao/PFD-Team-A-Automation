@@ -25,7 +25,7 @@ class TestLoanData:
             'amount': [random.randint(100, 100000) for _ in range(rows)],
             'term': [random.randint(0, 3) for _ in range(rows)],
             'income': [random.randint(200000, 450000) for _ in range(rows)],
-            'age': [random.randint(18, 80) for _ in range(rows)]
+            'age': [random.randint(18, 50) for _ in range(rows)]
         })
 
     @staticmethod
