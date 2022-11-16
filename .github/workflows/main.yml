@@ -37,6 +37,7 @@ jobs:
         python -m pip install pytest-csv
         python -m pip install pandas
         python -m pip install allure-pytest
+        python -m pip install psutil
     
     - name: Run main.py
       run: |
