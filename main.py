@@ -24,7 +24,7 @@ def main():
 
     os.environ['browsers'] = ','.join(os_browser[current_os])
 
-    REPEAT = 5
+    REPEAT = 20
 
     os.environ['repeat'] = str(REPEAT)
 
