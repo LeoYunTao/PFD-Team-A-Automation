@@ -21,12 +21,6 @@ from config import URL
 class TestForgotPasswordData():
 
     @staticmethod
-    def generate_data():
-        return pd.DataFrame({
-            'email': ['terrence_eng@hotmail.com'] # THIS IS MY PERSONAL EMAIL DONT SPAM ME, currently hard coded
-        }).to_dict('records')
-
-    @staticmethod
     def generate_test_email(rows=5):
         fake = Faker()
         return pd.DataFrame({
@@ -35,15 +29,14 @@ class TestForgotPasswordData():
 
 class TestForgotPassword:
 
-    @pytest.mark.parametrize('form_input_data', TestForgotPasswordData.generate_data())
     @pytest.mark.parametrize("os_system", [platform.platform()])
-    def test_main(self, driver, os_system, form_input_data):
+    def test_main(self, driver, os_system, email):
 
         selenium_actions = SeleniumActions(driver)
 
         selenium_actions.load_page(URL['forgot_password'], By.TAG_NAME, 'input')
 
-        selenium_actions.fill_form(form_input_data)
+        selenium_actions.fill_form(email)
 
         is_email_reset_successful = selenium_actions.is_element_located(By.XPATH, '//h3[text()=" Your link to reset has been sent to your email! "]')
 

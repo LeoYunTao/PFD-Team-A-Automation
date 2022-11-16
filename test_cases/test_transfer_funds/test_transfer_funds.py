@@ -15,13 +15,6 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 
 class TestTransferFundsData:
-    @staticmethod
-    def get_login_details():
-        return pd.DataFrame({
-            'username': ['yt'],
-            'password': ['abc123'],
-            
-        }).to_dict('records')
 
     @staticmethod
     def get_transfer_money_form():
@@ -50,7 +43,6 @@ class TestTransferFunds:
         assert URL['transfer_money'] == driver.current_url
 
     @pytest.mark.parametrize("transfer_money_form", TestTransferFundsData.get_transfer_money_form())
-    @pytest.mark.parametrize("login_details", TestTransferFundsData.get_login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_main(self, os_system, driver, login_details, transfer_money_form):
         selenium_actions = SeleniumActions(driver)
@@ -75,7 +67,6 @@ class TestTransferFunds:
         driver.quit()
 
     @pytest.mark.parametrize("transfer_money_form", TestTransferFundsData.get_test_amount())
-    @pytest.mark.parametrize("login_details", TestTransferFundsData.get_login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_amount(self, os_system, driver, login_details, transfer_money_form):
         selenium_actions = SeleniumActions(driver)

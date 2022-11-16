@@ -1,6 +1,9 @@
 import pytest
 
 import os
+import pandas as pd
+
+from config import test_data_path
 
 from selenium import webdriver
 from selenium.webdriver import chrome, firefox, edge
@@ -18,6 +21,21 @@ def pytest_addoption(parser):
 @pytest.fixture
 def production(request):
     return request.config.getoption('--production')
+
+@pytest.fixture(params=pd.read_csv(f'{test_data_path}/login_details.csv')
+    .to_dict('records'))
+def login_details(request):
+    return request.param
+
+@pytest.fixture(params=pd.read_csv(f'{test_data_path}/email.csv')
+    .to_dict('records'))
+def email(request):
+    return request.param
+
+@pytest.fixture(params=pd.read_csv(f'{test_data_path}/quote_id.csv')
+    .to_dict('records'))
+def quote_id(request):
+    return request.param
 
 @pytest.fixture(params=os.environ.get('browsers', 'chrome').split(','))
 def driver(request, production):

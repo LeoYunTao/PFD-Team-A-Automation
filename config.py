@@ -16,3 +16,4 @@ URL = {
 allure_results_path = "allure-results"
 csv_reports_path = "csv-reports"
 excel_report_path = "excel-report"
+test_data_path = "test_data"

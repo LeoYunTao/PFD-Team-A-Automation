@@ -15,13 +15,6 @@ from selenium.common.exceptions import TimeoutException
 
 class Form:
     @staticmethod
-    def login_details():
-        return pd.DataFrame({
-            'username': ["Terrence"],
-            'password': ["T0491211F"],
-        }).to_dict("records")
-
-    @staticmethod
     def generate_test_password():
         fake = Faker()
 
@@ -31,11 +24,11 @@ class Form:
         }).to_dict("records")
 
 class TestLogin:
-    @pytest.mark.parametrize("form_input_data", Form.login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
-    def test_main(self, driver, os_system, form_input_data):
+    def test_main(self, driver, os_system, login_details):
+        
         selenium_actions = SeleniumActions(driver)
-        selenium_actions.login(form_input_data)
+        selenium_actions.login(login_details)
 
         assert URL['main'] == driver.current_url
         driver.quit()

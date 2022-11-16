@@ -15,11 +15,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
 class Form:
-    @staticmethod
-    def loan_details():
-        return pd.DataFrame({
-            'quoteID': ["637336a5929b090046800455"],
-        }).to_dict("records")
 
     @staticmethod
     def generate_false_id(rows=5):
@@ -30,14 +25,13 @@ class Form:
 
 class TestLoanStatus:
 
-    @pytest.mark.parametrize("form_input_data", Form.loan_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
-    def test_main(self, driver, os_system, form_input_data):
+    def test_main(self, driver, os_system, quote_id):
         selenium_actions = SeleniumActions(driver)
         
         selenium_actions.load_page(URL['status'], By.TAG_NAME, 'input')
         
-        selenium_actions.fill_form(form_input_data)
+        selenium_actions.fill_form(quote_id)
 
         is_view_loan_detail_successful = selenium_actions.is_element_located(By.ID, 'email')
 

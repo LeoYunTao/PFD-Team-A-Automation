@@ -16,12 +16,6 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import Select
 
 class Form:
-    @staticmethod
-    def login_details():
-        return pd.DataFrame({
-            'username': ["Terrence"],
-            'password': ["T0491211F"],
-        }).to_dict("records")
 
     @staticmethod
     def account_details(rows=5):
@@ -52,7 +46,6 @@ class TestApplyAccount:
         selenium_actions.fill_form(form_input_data)
 
     @pytest.mark.parametrize("form_input_data", Form.account_details(rows=5))
-    @pytest.mark.parametrize("login_details", Form.login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_main(self, driver, os_system, login_details, form_input_data):
 
@@ -92,7 +85,6 @@ class TestApplyAccount:
         # driver.quit()
 
     @pytest.mark.parametrize("form_input_data", Form.generate_test_type_of_account())
-    @pytest.mark.parametrize("login_details", Form.login_details())
     @pytest.mark.parametrize("os_system", [platform.platform()])
     def test_type_of_account(self, driver, os_system, login_details, form_input_data):
         selenium_actions = SeleniumActions(driver)
