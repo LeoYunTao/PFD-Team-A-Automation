@@ -6,7 +6,7 @@ from config import allure_results_path, csv_reports_path
 
 def main():
 
-    N_JOBS = 5
+    N_JOBS = 10
 
     os_browser = {
         'windows': ['chrome', 'firefox', 'edge'],
