@@ -57,7 +57,7 @@ html = """\
 <html>
   <body>
   
-    <div>Hi user, <br><br>
+    <div>Hi User, <br><br>
 The test cases have been run successfully.<br>
 You can view the excel report in the attachment and the Allure report in the link provided.</div>
     <p>
