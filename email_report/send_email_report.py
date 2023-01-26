@@ -1,5 +1,4 @@
 from my_email import email_mine , password_mine
-from email_addresses import email1 #,email2
 
 #Added this so that we can import config file
 
@@ -21,12 +20,17 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+
+sys.argv.pop(0)
+
+emails = sys.argv
+
 subject = "Test Case Results for "+date.today().strftime("%d/%m/%Y")
 body = "These are the test case results"
 # Create a multipart message and set headers
 message = MIMEMultipart()
 message["From"] = email_mine
-message["To"] = ", ".join(email1) #for multiple
+message["To"] = ", ".join(emails) #for multiple
 message["Subject"] = subject
 
 

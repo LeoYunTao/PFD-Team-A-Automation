@@ -37,7 +37,7 @@ def email(request):
 def quote_id(request):
     return request.param
 
-@pytest.fixture(params=os.environ.get('browsers', 'chrome').split(','))
+@pytest.fixture(params=os.environ.get('browsers', default='chrome').split(','))
 def driver(request, production):
 
     browser = request.param
