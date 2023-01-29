@@ -12,7 +12,7 @@ on:
       emails:
         required: true
         description: "Emails (Using space seperated values)"
-      os:
+      operatingSystems:
         required: true
         description: "Operating Systems (using comma seperated values)"
 #   schedule:
@@ -29,7 +29,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ${{ fromJSON(github.event.inputs.os) }}
+        os: ${{ fromJSON(github.event.inputs.operatingSystems) }}
 
     steps:
     - uses: actions/checkout@v3
