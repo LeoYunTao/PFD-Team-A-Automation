@@ -2,6 +2,16 @@ name: Main Test
 
 on: 
   workflow_dispatch:
+    inputs:
+      browsers:
+        required: true
+        description: "Using comma seperated values"
+      testcases:
+        required: true
+        description: "Using comma seperated values"
+      emails:
+        required: true
+        description: "Using space seperated values"
 #   schedule:
 #     - cron: '0 15 * * *'
 
@@ -40,7 +50,7 @@ jobs:
     
     - name: Run main.py
       run: |
-        python main.py
+        python main.py --browsers ${{ github.input.event.browsers }} --testcases ${{ github.input.event.testcases }}
     
     - name: Upload allure results to artifacts
       uses: actions/upload-artifact@v3
@@ -146,4 +156,4 @@ jobs:
 
       - name: Send Email
         run: |
-          python email_report/send_email_report.py
+          python email_report/send_email_report.py ${{ github.input.event.emails }}
