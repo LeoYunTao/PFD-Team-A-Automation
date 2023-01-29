@@ -85,4 +85,4 @@ text = message.as_string()
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
     server.login(email_mine, password_mine)
-    server.sendmail(email_mine, email1, text)
+    server.sendmail(email_mine, emails, text)
