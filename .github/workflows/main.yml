@@ -15,7 +15,7 @@ on:
       operatingSystems:
         required: true
         description: "Operating Systems (using comma seperated values)"
-        default: "[windows-latest, ubuntu-20.04, macOS-latest]"
+        default: '["windows-latest", "ubuntu-20.04", "macOS-latest"]'
 #   schedule:
 #     - cron: '0 15 * * *'
 
