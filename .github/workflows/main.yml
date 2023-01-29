@@ -29,7 +29,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ${{ github.input.event.os }}
+        os: ${{ github.inputs.event.os }}
 
     steps:
     - uses: actions/checkout@v3
@@ -53,7 +53,7 @@ jobs:
     
     - name: Run main.py
       run: |
-        python main.py --browsers ${{ github.input.event.browsers }} --testcases ${{ github.input.event.testcases }}
+        python main.py --browsers ${{ github.inputs.event.browsers }} --testcases ${{ github.inputs.event.testcases }}
     
     - name: Upload allure results to artifacts
       uses: actions/upload-artifact@v3
@@ -159,4 +159,4 @@ jobs:
 
       - name: Send Email
         run: |
-          python email_report/send_email_report.py ${{ github.input.event.emails }}
+          python email_report/send_email_report.py ${{ github.inputs.event.emails }}
