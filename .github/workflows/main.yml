@@ -5,13 +5,13 @@ on:
     inputs:
       browsers:
         required: true
-        description: "Using comma seperated values"
+        description: "Browsers (using comma seperated values)"
       testcases:
         required: true
-        description: "Using comma seperated values"
+        description: "Test cases (using comma seperated values)"
       emails:
         required: true
-        description: "Using space seperated values"
+        description: "Emails (Using space seperated values)"
 #   schedule:
 #     - cron: '0 15 * * *'
 
