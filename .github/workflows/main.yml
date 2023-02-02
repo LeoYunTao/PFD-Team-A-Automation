@@ -12,6 +12,7 @@ on:
       emails:
         required: true
         description: "Emails (Using space seperated values)"
+        default: 'invalid13403142394309840248777@abc.com'
       operatingSystems:
         required: true
         description: "Operating Systems (using comma seperated values)"
